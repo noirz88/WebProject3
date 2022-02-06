@@ -1,0 +1,121 @@
+var smVi = "/View.do";
+/*
+var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+for (var word in mobileKeyWords){
+	if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+		smVi = "MobileViewer";
+		break;
+	} 
+};
+
+*/
+
+
+if ( !_smartopen_pageCount ) { 
+	var _smartopen_pageCount = 1;
+	var _SMEX_SITENAME="https://smartopen3.tongyeong.go.kr:18080/SmartOpen";
+	var _LoadConvertImage = 0;
+	var _CurrentConverting = 0;
+}
+
+/**스마트오픈 링크 처리용*/
+function smartopen_link(url,name, css_class) {
+	loading_convert(location.hostname, url + encodeURIComponent(name), name,  null, css_class);	
+}
+/**
+ * 호스트, 다운로드 파일 URL, 이름을 읽어 들여서 변환을 위해 전달합니다. 
+ */
+function loading_convert(host, url, name, uid, css_class) {
+	host = 'www.tongyeong.go.kr';
+	if ( uid && uid != null && (uid == "0" || uid=="" )) {
+		return ;
+	} else {
+		url = url +  ( url.lastIndexOf("?") > -1 ? "&" : "?");
+		if ( uid != null && uid) {
+			url = url + "uid=" + uid;
+		}
+	}
+	if ( !isConvetableFile(name) ) {
+		return ;
+	}
+	
+	var btn_class = "b1 quickview";
+	if ( css_class ) {
+		btn_class = css_class;
+	}
+	if ( host == "" ) {
+		host = location.host;
+	}
+	var actionUrl = _SMEX_SITENAME + "/Ex.do";
+	var converUrl = "https://" + host +  escape(encodeURIComponent( url)) + "&name=" + escape(encodeURIComponent(name));
+
+	/* 기존소스 입니다. 
+	
+	var str = "<" + "span id='idConvertingMsg" + _LoadConvertImage + "'" + ">" + "<img src='" + _SMEX_SITENAME + "/icon/extractor.gif' align='absmiddle'>"+"<" + "/span" + ">";
+		str += "<" + "a href='#' onclick=\"ConvertedView('"+ converUrl.replace(/\'/gi, "\\'") +"');\"" + "title='선택 하시면 파일 내용을 바로 확인 하실 수 있습니다.'>";
+		str +="<" + "img border='0' id='idConvertedImg"+_LoadConvertImage+"'";
+		str +="onload='setConvertedDisplay("+ _LoadConvertImage +")' style='height:0px;width:0px;' ";
+		str +="src=\""+actionUrl+"?url=" + converUrl + "&r=" + escape(encodeURIComponent(location.href)) +"\" align='absmiddle'>";
+		str +="</a>";
+	*/
+	var str = "<" + "span id='idConvertingMsg" + _LoadConvertImage + "'" + ">" + ""+"<" + "/span" + ">";
+	str += "<" + "a href='#' onclick=\"ConvertedView('"+ converUrl.replace(/\'/gi, "\\'") +"');return false;\"" + "title='선택 하시면 파일 내용을 바로 확인 하실 수 있습니다.' target='_blank' class='" + btn_class + "' id='idConvertingLink" + _LoadConvertImage  + "' style=\"display:none\">";
+	str +="<" + "img border='0' id='idConvertedImg"+_LoadConvertImage+"'";
+	str +="onload='setConvertedDisplay("+ _LoadConvertImage +")' style='height:0px;width:0px;' ";
+	str +="src=\""+actionUrl+"?url=" + converUrl + "&r=" + escape(encodeURIComponent(location.href)) +"\" />";
+	str +='<i class="ic1"></i><span class="tt1">변환중</span></a>';
+	//document.write("<textarea>" + str + "</textarea>")
+	document.write(str);
+	_LoadConvertImage = _LoadConvertImage+1;
+}
+
+
+/**
+ * 변환결과에 따른 보기 이미지 부분 스타일 변경.
+ */
+function setConvertedDisplay(num) {
+	var objMsg = document.getElementById("idConvertingMsg" + num);
+	var objImg = document.getElementById("idConvertedImg" + num);
+	objMsg.style.display = "none";
+	objImg.style.display = "none";
+	
+	var objLink = document.getElementById("idConvertingLink" + num);
+	objLink.style.display = "";
+	objLink.innerHTML = '<i class="ic1"></i><span class="tt1">바로보기</span>';
+	
+}
+function getURLEncodeConverFile(name) {
+	if(name.lastIndexOf("/") < 0 ){
+     return name;
+   }
+   var result = name.substr(0, name.lastIndexOf("/")) + encodeURIComponent(name.substr(name.lastIndexOf("/")+1).toLowerCase());
+   return result;
+}
+/**
+ * 사용가능 파일 확장자 체크 
+ * 서버 단에서 다시한번 체크를 합니다.
+ */ 
+function isConvetableFile(pValue){
+   var fileExt = new Array(".hwp", ".pdf", ".doc", ".xls", ".ppt",".txt", ".rtf", "pdf", "docx", "xlsx", "pptx");
+   
+   if(pValue.lastIndexOf(".") < 0 ){
+     return false;
+   }
+   for(var i=0; i < fileExt.length; i++){
+     if(pValue.substr(pValue.lastIndexOf("."), 4).toLowerCase() == fileExt[i]){
+       return true;
+     }
+   }
+   return false;
+}
+
+/**
+ * 변환 결과를 보여 줍니다.
+ * 넘겨주실경우에 &를 반드시 |으로 치완해서 넘겨 줘야 합니다.
+ * 뭐 그렇지 않을경우에는
+ */ 
+function ConvertedView(url) {
+	var viewUrl = _SMEX_SITENAME + smVi;
+	var _convertWin = window.open(viewUrl + "?url=" +  url, "");
+	_convertWin.focus();
+}

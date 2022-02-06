@@ -1,0 +1,337 @@
+@charset "utf-8";
+/**
+ * @File Name : lib1cp2.css
+ * @Description : Components Library : TOUR1. 20160617 현재 웹사이트에 사용되지 않음.
+ * @Modification Information
+ * <pre>
+ * 수정일 | 수정자 | 수정내용
+ * 2016.05.30 | 문영신 | 최초 등록
+ * 2016.11.28 | 문영신 | 요구반영. 결함개선. 고도화. letter-spacing:-1px; 제거.
+ * </pre>
+ * @author 웹표준화실 문영신
+ * @since 2015.11.10
+ *
+ * @Copyright (C) IACTS.CO.KR All rights reserved.
+ */
+
+/*! Components Library v.20150628 r.20161128 | by MoonYoungshin[myshin@naver.com] | MIT License */
+
+/* Note)
+ | 본문콘텐츠 템플릿2.여행1 (샘플)
+ | (( 20160115. 화면설계 없었음. 최신템플릿 고도화.
+ | ./tp2/tp2tour1*.jsp (여행1)
+ ) 지도에 체크 지역. 여행목록은 2단 카드UI. 여행상세는 2단(세부정보 | 주변정보)
+ ) 세부정보와 주변정보 공간을 같은 비중으로 표현하고 있어 세부정보 집중도가 떨어짐.
+ */
+
+/* [IE7+]compatible! */
+
+/* Table of contents ))
+ | @import
+ | Overwrite
+ | .infomenu1.col1to2
+ | .wrap1map1check1
+ | .tour1list1
+ | .wrap1col1to2
+ | .tour1view1
+ | …
+ | RWD
+ */
+
+
+/* All Device ◆◆◆◆◆◆◆◆◆◆ */
+
+
+/* … lib.css )) Overwrite YYYYMMDD ◆◆◆ */
+
+
+/* ◇◆ Components Library ◇◆◇◆◇◆◇◆◇◆ */
+
+
+/* ◇◆ TOUR Share ◇◆ */
+
+/* 정보메뉴 */
+.infomenu1.col1to2{}
+.infomenu1.col1to2 .col{float:left;width:100%;margin:.333em 0;}
+
+/* 조회(입력1.버튼1) 20160121 */
+[class*='ask1input']{position:relative;margin:0 0 1.5em;padding:0 10em 0 0;overflow:hidden;}
+[class*='ask1input'] fieldset{margin:0;}
+[class*='ask1input'] .text1{float:left;width:100%;}
+[class*='ask1input'] .submit{float:left;width:10em;margin-right:-10em;}
+[class*='ask1input'] .ic1{display:inline-block;width:25px;height:25px;
+	margin:-3px 0; /* =:=(25-14*1.333)/2 */
+	background:url(../../img/lib1cp2/ic50here1.png) no-repeat center center;
+	background-size:contain;
+	vertical-align:top;
+}
+
+/* 지도공통 20160415 */
+.map1{z-index:1;position:relative;height:250px;background:#d1d7db;overflow:hidden;}
+.map1 img{max-width:none;}
+/* 레이어팝업 */
+.map1 .map1layer1{position:absolute;left:152px;top:215px; /* 말풍선 가리키는 곳 */
+	width:242px;height:138px;
+	margin:-200px 0 0 -141px; /* 가리키는 곳에서 이거 좌상단거리 */
+	padding:0 24px 82px;
+	background:url(../../img/lib1cp2/map1layer1bg.png) no-repeat;
+	line-height:1.333;
+	overflow:hidden;
+}
+.map1layer1>.h1{display:block;height:18px;margin:0 10px 18px 0;padding:11px 0;color:#fff;font-weight:600;font-size:14px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.map1layer1>.h1>a{color:#fff;}
+.map1layer1>.b1.close{float:left;position:absolute;right:0;top:0;width:20px;height:20px;
+	margin:10px 15px;
+	background:url(../../img/lib1cp2/ic40close1.png) no-repeat center center;
+	background-size:contain;
+	overflow:hidden;
+	text-indent:-9999px;}
+.map1layer1>.f1{float:left;position:relative;width:100px;height:80px;margin:0 10px 0 0;overflow:hidden;}
+.map1layer1>.f1 img{min-height:100%;}
+.map1layer1>.wrap1texts{float:left;position:relative;width:142px;height:80px;margin:0 -10px 0 0;font-size:13px;}
+.map1layer1 .a2,
+.map1layer1 .a3{display:block;position:relative;margin:.666em 0;padding:0 0 0 20px;}
+.map1layer1 .ic1{float:left;position:absolute;left:0;top:0;width:20px;height:20px;
+	background:url() no-repeat center center;
+	background-size:contain;
+	overflow:hidden;
+	text-indent:-9999px;}
+.map1layer1 .a2>.ic1{	background-image:url(../../img/lib1cp2/ic40mapmarker1.png);}
+.map1layer1 .a3>.ic1{	background-image:url(../../img/lib1cp2/ic40phone1.png);}
+/* 현재 페이지 (관광지) 위치 */
+.map1 .map1marker1here1{position:absolute;left:50%;top:50%; /* 맵마커 가리키는 곳 */
+	width:41px;height:44px;
+	margin:-41px 0 0 -13px; /* 가리키는 곳에서 이거 좌상단거리 */
+	padding:0;
+	background:url(../../img/lib1cp2/ic4map1marker1here1.png) no-repeat;
+}
+
+/* 체크선택과맵 20151124 20160415 */
+.wrap1map1check1{}
+.wrap1map1check1 .map1{float:left;width:100%;margin:0 0 10px 0;}
+/* 체크선택 */
+.check1{z-index:10;float:left;position:relative;width:100%;height:40px;margin:0 0 1px 0;}
+.check1 .check1s{float:left;width:50%;}
+*+html .check1 .check1s~.check1s{margin-right:-1px;}
+.check1 .check1s>a.toggle{display:block;position:relative;height:20px;margin:0 0 0 1px;padding:10px 27px 10px .5em;background:#40454d;color:#fff;font-size:14px;line-height:1.333;text-decoration:none;}
+.check1 .check1s:first-child>a.toggle{margin:0;}
+.check1 .check1s>a.toggle>.h1{font-weight:normal;}
+.check1 .check1s>a.toggle>.ic1{float:left;position:absolute;right:0;top:50%;width:0;height:0;margin:-3px 9px;border:5px solid transparent;border-top-color:#999;overflow:hidden;text-indent:100%;}
+.check1 .check1s>a.toggle.on{background:#1983dc;}
+.check1 .check1s>a.toggle.on>.ic1{margin:-8px 9px;border-color:transparent;border-bottom-color:#fff;}
+.check1 .check1c{display:none;position:absolute;left:0;right:0;top:41px;}
+.check1 .check1c>.bg{position:absolute;left:0;right:0;top:0;bottom:0;background:#40454d;opacity:.9;}
+.check1 .check1c>.wrap1{position:relative;padding:10px 20px;overflow:hidden;color:#fff;}
+.check1 .check1c .item{float:left;width:50%;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.check1 .check1c .item input[type='checkbox']{margin:.666em 0;}
+.check1 .check1s+.check1s>.check1c>.wrap1{height:230px;overflow-y:auto;}
+.check1 .check1s+.check1s>.check1c .item{display:block;float:none;width:auto;}
+
+
+/* ◇◆ TOUR List */
+
+/* 목록(그림1.링크3.버튼1) 20151123 */
+.tour1list1{clear:both;margin:0 0 1.5em 0;line-height:1.333;overflow:hidden;}
+.tour1list1 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #eee;overflow:hidden;}
+.tour1list1 .li1{margin:0;padding:0;}
+.tour1list1 .li1 .wrap1{display:block;position:relative;margin:-1px 0 0 0;padding:10px 0 10px 120px;border-top:1px solid #eee;text-decoration:none;overflow:hidden;}
+.tour1list1 .li1 .f1{float:left;width:110px;height:80px;margin:0 10px 0 -120px;overflow:hidden;}
+.tour1list1 .li1 .f1 img{min-height:100%;}
+.tour1list1 .li1 .f1+.wrap1texts{float:left;width:100%;}
+.tour1list1 .li1 .a1{display:block;position:relative;padding:0 0 0 25px;color:#333;font-size:1.143em;}
+.tour1list1 .li1 .a1>.ic1{float:left;position:absolute;left:0;top:0;width:20px;height:25px;padding:3px 0 0 0;
+	background:url(../../img/lib1cp2/ic4mapmarker1bg.png) no-repeat center center;
+	background-size:contain;
+	color:#fff;
+	font:bold 12px arial, sans-serif;
+	text-align:center;
+	overflow:hidden;
+	text-shadow:0 0 2px rgba(0,0,0,.5);
+}
+.tour1list1 .li1 .a2,
+.tour1list1 .li1 .a3{display:block;position:relative;margin:.833em 0;padding:0 0 0 25px;color:#666;font-size:.929em;}
+.tour1list1 .li1 .a2>.ic1,
+.tour1list1 .li1 .a3>.ic1{float:left;position:absolute;left:0;top:0;width:20px;height:20px;
+	border-radius:50%;
+	background:#eee url() no-repeat center center;
+	background-size:contain;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.tour1list1 .li1 .a2>.ic1{background-image:url(../../img/lib1cp2/ic40s1mapmarker1.png);}
+.tour1list1 .li1 .a3>.ic1{background-image:url(../../img/lib1cp2/ic40s1phone1.png);}
+.tour1list1 .li1 .b1.detail{display:none;float:left;position:absolute;right:30px;top:25px;}
+.tour1list1 .li1 .b1.detail>.ic1{float:left;width:50px;height:50px;
+	background:url(../../img/lib1cp2/ic100detail1.png) no-repeat center center;
+	background-size:contain;
+}
+
+/* ◇◆ TOUR View */
+
+/* 세부와주변정보 20151124 */
+.wrap1col1to2{display:block;clear:both;position:relative;}
+.wrap1col1to2>.col{float:left;width:100%;}
+.wrap1col1to2>.col>h2{padding:0;background:transparent;color:#085aac;font-size:1.429em;}
+.wrap1col1to2>.col:first-child>h2{margin-top:0;}
+
+/* 관광상세뷰(그림1.링크3.버튼1) 20151124 */
+.tour1view1 .pic1gallery1{} /* ))) lib1cp1.css */
+/* 기본정보 */
+.tour1view1 .info1{clear:both;position:relative;padding:3%;background:#f5f5f5;}
+.tour1view1 .info1>.deco{display:none;float:left;position:absolute;left:10%;top:50%;width:70px;height:70px;margin:-35px 0 0 -35px;
+	background:url(../../img/lib1cp2/ic140question1.png) no-repeat center center;
+	background-size:contain;}
+.tour1view1 .info1 .a2,
+.tour1view1 .info1 .a3{display:block;position:relative;margin:.333em 0;padding:0 0 0 25px;}
+.tour1view1 .info1 .a3 a{color:#333;}
+.tour1view1 .info1 .a2>.ic1,
+.tour1view1 .info1 .a3>.ic1{float:left;position:absolute;left:0;top:.166em;width:20px;height:20px;
+	background:url() no-repeat center center;
+	background-size:contain;
+	overflow:hidden;
+	text-indent:-9999px;}
+.tour1view1 .info1 .a2>.ic1{background-image:url(../../img/lib1cp2/ic40mapmarker1.png);}
+.tour1view1 .info1 .a2>.ic1.course{background-image:url(../../img/lib1cp2/ic40course1.png);}
+.tour1view1 .info1 .a3>.ic1{background-image:url(../../img/lib1cp2/ic40phone1.png);}
+.tour1view1 .info1 .t1{color:#333;font-weight:600;font-size:1.071em;}
+.tour1view1 .info1 .t2{display:block;margin:0 0 .666em 0;color:#666;font-size:.929em;}
+.tour1view1 .info1 ul.lst1{list-style:none;margin-left:0;padding:0;font-size:.857em;text-align:left;}
+.tour1view1 .info1 ul.lst1 li{margin:.333em 0;padding:0 0 0 .833em;}
+.tour1view1 .info1 ul.lst1 li{background:url(../../img/lib1cp2/bu1.png) no-repeat .2em .6em;}
+/* 버튼들 */
+.tour1view1 .btns{margin:1em -1%;text-align:center;overflow:hidden;}
+.tour1view1 .btns .col{float:left;width:31.333%;margin:0 1%;}
+*+html .tour1view1 .btns .col{width:30.333%;}
+.tour1view1 .btns a.button{width:100%;height:auto;padding-left:0;padding-right:0;border-color:#1983dc;background-color:#1983dc;}
+.tour1view1 .btns a.button .ic1{display:block;width:25px;height:25px;margin:0 auto;
+	background:url() no-repeat center center;
+	background-size:contain;}
+.tour1view1 .btns a.button .ic1.getdirections{background-image:url(../../img/lib1cp2/ic50compass1.png);}
+.tour1view1 .btns a.button .ic1.phone{background-image:url(../../img/lib1cp2/ic50phone1.png);}
+.tour1view1 .btns a.button .ic1.blogsearch{background-image:url(../../img/lib1cp2/ic50blogsearch1.png);}
+/* 내용 */
+.tour1view1 .substance{padding:.666em 0;border-top:1px dotted #d9d9d9;border-bottom:1px solid #e4e4e4;}
+
+/* 주변정보 */
+.tour1around1{}
+.tour1around1 .map1{float:none;}
+
+/* 관광본문메뉴1.활성반전 20151125 */
+.tour1cnb1{z-index:10;position:relative;margin:0 0 1.333em 0;padding:0 .1%;line-height:1.333;overflow:hidden;}
+.tour1cnb1 .h1{clear:both;float:left;}
+.tour1cnb1 > *{display:block;list-style:none;min-height:0 /* [IE7] */;margin:0 -.1%;padding:0;}
+.tour1cnb1 > *:before,
+.tour1cnb1 > *:after{content:'';display:table;} /* [IE8+] */
+.tour1cnb1 > *:after{clear:both;}
+.tour1cnb1 > * > li{display:inline-block /* ☆ [IE7]bugFix */;float:left;height:auto;margin:0 -1px 0 0;padding:0 0 .3%;text-align:center;}
+*+html .tour1cnb1 > * > li{display:inline /* ☆ [IE7]bugFix */;float:none;margin-right:-1px;vertical-align:top;}
+.tour1cnb1 > * > li > a{display:block;margin:0;padding:.666em 1.333em;border:1px solid #d5d5d5;background:#f5f5f5;color:#666;text-decoration:none !important;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.tour1cnb1 > * > li > a:hover,
+.tour1cnb1 > * > li > a:focus{position:relative;border-color:#0056a5;}
+.tour1cnb1 > * > li.on > a{position:relative;border-color:#0056a5;background:#0056a5;color:#fff;box-shadow:inset 0 0 3px 0 rgba(255, 255, 255, .3);}
+
+/* 관광본문메뉴2.활성반전 20151126 */
+.tour1cnb2{z-index:10;position:relative;margin:0 0 1.333em 0;line-height:1.333;overflow:hidden;}
+.tour1cnb2 > *{display:block;list-style:none;min-height:0 /* [IE7] */;margin:0;padding:0;}
+.tour1cnb2 > *:before,
+.tour1cnb2 > *:after{content:'';display:table;} /* [IE8+] */
+.tour1cnb2 > *:after{clear:both;}
+.tour1cnb2 > * > li{display:inline-block /* ☆ [IE7]bugFix */;float:left;height:auto;padding:0 0 5px;text-align:center;}
+*+html .tour1cnb2 > * > li{display:inline /* ☆ [IE7]bugFix */;float:none;vertical-align:top;}
+.tour1cnb2 > * > li > a{display:block;margin:0;padding:0 .666em;border:1px solid #fff;border-right-color:#d5d5d5;background:#fff;color:#333;font-size:1.143em;text-decoration:none !important;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.tour1cnb2 > * > li:first-child > a{border-left-color:#fff;}
+.tour1cnb2 > * > li.on > a{color:#009F9D;font-weight:bold;}
+
+/* 내용링크 탭메뉴 클릭한 후 탭도 보여준다. */
+.wrap1tour1around1c{}
+	.tour1around1c{margin:-80px 0 0 0;padding:80px 0 0 0;}
+.wrap1tour1view1c{}
+	.tour1view1c{margin:-80px 0 0 0;padding:80px 0 0 0;}
+
+.wrap1tour1view1c2c{}
+	.tour1view1c2c{margin:-90px 0 0 0;padding:90px 0 0 0;}
+
+.hgroup1{margin:0 0 1.666em;border-bottom:1px dotted #c9c9c9;}
+.hgroup1 .hb0{margin:0;color:#333;font-size:2.143em;}
+.hgroup1 .hb0+p{margin-top:.333em;}
+
+
+dl.dl1bd2{position:relative;margin:0 0 5px 0;
+	padding:0 10px 0 110px;
+	border:1px solid #d5d5d5;border-left:3px solid #186dd4;background:#f5f5f5;
+	overflow:hidden;}
+dl.dl1bd2>dt{float:left;width:100px;margin:0 0 0 -110px;padding:10px 0;color:#333;font-weight:bold;text-align:center;}
+dl.dl1bd2>dd{float:left;width:100%;margin:0;padding:10px 0;border-left:10px solid #fff;background:#fff;}
+dl.dl1bd2.w1{padding-left:110px}
+dl.dl1bd2.w1>dt{width:100px;margin:0 0 0 -110px;}
+
+/* YYYYMMDD.Writer. ◇◆ */
+
+
+/* RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */
+/* small~xlarge */
+@media all and (min-width:768px){/* medium ◇◆◇◆◇◆◇◆◇◆ */
+
+.infomenu1.col1to2 .col{width:50%;}
+*+html .infomenu1.col1to2 .col{margin-right:-1px;}
+.infomenu1.col1to2 .info1{font-size:16px;}
+
+.check1{float:right;width:30%;height:500px;}
+.check1 .check1s{width:100%;}
+.check1 .check1s>a.toggle{margin:0;padding:13px 27px 12px .5em;background:#1983dc;color:#fff;font-size:16px;cursor:default;}
+.check1 .check1s>a.toggle>.ic1{display:none;}
+.check1 .check1s:first-child>a.toggle{margin:0;}
+.check1 .check1c{display:block !important;position:relative;top:0;}
+.check1 .check1s>.check1c>.wrap1{height:165px;}
+.check1 .check1s+.check1s>.check1c>.wrap1{height:205px;}
+.wrap1map1check1 .map1{width:70%;height:500px;}
+
+.tour1list1 .li1 .wrap1{padding:15px 100px 15px 140px;}
+.tour1list1 .li1 .f1{width:120px;height:90px;margin:0 -4px 0 -136px;}
+.tour1list1 .li1 .a2,
+.tour1list1 .li1 .a3{margin:1em 0;}
+.tour1list1 .li1 .b1.detail{display:block;}
+
+.tour1view1 .info1{padding:3% 3% 3% 20%;}
+.tour1view1 .info1>.deco{display:block;}
+
+.tour1view1 .btns .col{float:none;margin:0 3px;}
+.tour1view1 .btns a.button{width:auto;padding-left:2em;padding-right:2em;}
+.tour1view1 .btns a.button .ic1{display:inline-block;width:25px;height:25px;margin:0 .166em 0 0;vertical-align:middle;}
+.tour1view1 .btns a.button .t1{display:inline;}
+.tour1view1 .substance{font-size:1.071em;}
+
+.tour1cnb1 > * > li > a{padding:.833em 2em;font-size:1.071em;}
+
+.tour1around1 .map1{width:100%;height:320px;} /* ☆ */
+
+dl.dl1bd2.w1{padding-left:210px}
+dl.dl1bd2.w1>dt{width:200px;margin:0 0 0 -210px;}
+
+} /* /(min-width:768px) */
+@media all and (min-width:1000px){/* large ◇◆◇◆◇◆◇◆◇◆ */
+} /* /(min-width:1000px) */
+@media all and (min-width:1200px){/* xlarge ◇◆◇◆◇◆◇◆◇◆ */
+
+.check1{float:right;width:21.666%;height:500px;}
+*+html .check1{margin-left:-1px;} /* ☆ */
+.wrap1map1check1 .map1{width:78.333%;height:500px;} /* ☆ */
+
+.tour1list1 .lst1{margin:0 -1%;}
+.tour1list1 .li1{float:left;width:48%;margin:0 1%;}
+
+.tour1around1 .tour1list1 .li1{width:100%;margin:0;} /* ☆ */
+
+.wrap1col1to2>.col{float:left;width:47.5%;
+	margin:0 0 0 -1px;
+	padding:0 2.5% 0 0;
+	border-right:1px solid #e3e3e3;}
+.wrap1col1to2>.col.tour1around1{
+	margin:0 0 0 -1px;
+	padding:0 0 0 2.5%;
+	border:0;border-left:1px solid #e3e3e3;}
+.wrap1col1to2>.col>h2{margin-top:0;}
+
+
+} /* /(min-width:1200px) */
+/* /RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */

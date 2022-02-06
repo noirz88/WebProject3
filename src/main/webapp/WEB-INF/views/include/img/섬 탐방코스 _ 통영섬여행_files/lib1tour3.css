@@ -1,0 +1,1607 @@
+@charset "utf-8";
+/**
+ * @File Name : lib1tour3.css
+ * @Description : Components Library : TOUR3
+ * @Modification Information
+ * <pre>
+ * 수정일 | 수정자 | 수정내용
+ * 2016.11.28 | 문영신 | 최초 등록 (( lib1tour2.css 코드 전체 구성만 복제.
+ * (중략)
+ * 2017.01.09 | 문영신 | .pic1gallery3, .pic1gallery4 [FF] 결함개선.
+ * 2017.01.10 | 문영신 | 요구반영. 결함개선. 고도화.
+ * 2017.01.17 | 문영신 | .list2f1t2i1t2b2, .pic1gallery4 요구반영. 고도화.
+ * 2017.01.26 | 문영신 | .tour3btns1 요구반영.
+ * 2017.02.10 | 문영신 | .tour3map1layer1 요구반영.
+ * 2017.02.15 | 문영신 | .pic1gallery4 요구반영.
+ * 2017.02.23 | 문영신 | 반응형 이미지 가로 1px 오차 결함 해결.
+ * 2017.03.14 | 문영신 | .pic1gallery3,.pic1gallery4 수정 (반응형 오차는 JS 에서 하도록)
+ * 2017.03.17 | 문영신 | 코스여행 목록/상세 변경 )) .list2f1t1i1t2 .tour3course2 추가
+ * 2017.03.23 | 문영신 | 나의여행스케줄 상세 변경 )) .tour3course2 > .wrap1g2 .. 추가
+  * 2017.04.07 | 조미숙 | .list2f1t1i1t2 수정.
+ * </pre>
+ * @author 웹표준화실 문영신
+ * @since 2016.11.28
+ *
+ * @Copyright (C) IACTS.CO.KR All rights reserved.
+ */
+
+/*! Components Library v.20161202 r.20161214. | by MoonYoungshin[myshin@naver.com] | MIT License */
+
+/* [IE7+]compatible! */
+
+/* Table of contents ))
+ | @import
+ | Overwrite : ul.bu.bu1a1, .menu-group1
+ | .tour3btns1 .tour3btns2, .tour3btns3, .button.tour3more
+ | .hybrid1box1
+ | .tour3month1
+ | .tour3hb1, ul.bi1notice1, .line5pattern1, .kogl1
+ | .tour3map1
+ | .tour3card1, .tour3card2, .tour3card3
+ | .pic1gallery3, .pic1gallery4
+ | .tour3view1
+ | .tour3blog1
+ | .tour3around1 .tour3around2
+ | .tour3lightbox1
+ | .view1f1dl1, .view1f1info1
+ | .list2f1t3dl1, .list2f1t2t2b2, .list2f1t2i1t2b2, .list2f1t1i1t2
+ | .tour3course1, .tour3course2
+ | .box1collapse1
+ | …
+ | RWD
+ */
+
+
+/* All Device ◆◆◆◆◆◆◆◆◆◆ */
+
+
+/* … lib.css, lib1cp1.css )) Overwrite YYYYMMDD ◆◆◆ */
+
+
+/* .hb1 20161214 */
+.hb1.h3{background:url(../../img/lib1tour3/h3c2bg.png) no-repeat 0 .5em;}
+
+
+/* ul.bu 20161205 */
+ul.bu.bu1a1 li{background:url(../../img/lib1tour3/bu1.png) no-repeat .333em .666em;}
+
+
+/* .ic1.indy 20170110. 20170323 */
+.ic1.indy.ic57person1{width:57px;height:57px;background-image:url(../../img/lib1tour3/ic114s1person1.png);}
+.ic1.indy.ic57musicalnote1{width:57px;height:57px;background-image:url(../../img/lib1tour3/ic114s1musicalnote1.png);}
+.ic1.indy.ic57calendar1{width:57px;height:57px;background-image:url(../../img/lib1tour3/ic114s1calendar1.png);}
+.ic1.indy.ic20bin1{width:20px;height:20px;background-image:url(../../img/lib1tour3/ic40s5bin1.png);}
+.ic1.indy.ic20calendar1{width:20px;height:20px;background-image:url(../../img/lib1tour3/ic40s5calendar1.png);}
+.ic1.indy.ic20bars1{width:20px;height:20px;background-image:url(../../img/lib1tour3/ic40s6bars1.png);}
+.ic1.indy.ic20c2calendar1{width:20px;height:20px;background-image:url(../../img/lib1tour3/ic40s6c2calendar1.png);}
+.ic1.indy.ic20share1{width:20px;height:20px;background-image:url(../../img/lib1tour3/ic40s5share1.png);}
+.ic1.indy.ic35bulb1{width:35px;height:35px;background-image:url(../../img/lib1tour3/ic70s1bulb1.png);}
+.ic1.indy.course1a1ic1{width:24px;height:24px;background-image:url(../../img/lib1tour3/course1a1ic1@2x.png);}
+.ic1.indy.course2a1ic1{width:24px;height:24px;margin:-.166em 0 .166em;background-image:url(../../img/lib1tour3/course2a1ic1.png);}
+
+
+/* .menu-group1 20161128 */
+.menu-group1{margin:0;padding:0 1px 0 0;}
+.menu-group1:before,
+.menu-group1:after{content:'';display:table;clear:both;}
+.menu-group1 .m{float:left;position:relative;height:1.75em;margin:0 -1px .5em 0;padding:.333em 1em;border:1px solid #dde1e5;background:#f9fafb;color:#666;font-size:.857em;line-height:1.75;text-align:center;text-decoration:none;white-space:nowrap;}
+.menu-group1 .m.on{z-index:10;position:relative;padding-right:2em;background:#fff;border-color:#302f34;color:#302f34;}
+.menu-group1 .m.on:after{content:'';float:left;
+	position:absolute;right:0;top:50%;width:0;height:0;margin:-1px 10px;border:3px solid transparent;border-top-color:#333;overflow:hidden;text-indent:100%;
+}
+.menu-group1 .m:first-child,
+.menu-group1 .m:last-child{border-radius:0;}
+
+
+/* ◇◆ Components Library ◇◆◇◆◇◆◇◆◇◆ */
+
+
+/* ◇◆ TOUR Share ◇◆ */
+
+
+/* 버튼모음.픽1글1.세로정렬.격자. 20170126 */
+.tour3btns1{display:block;position:relative;margin:0 auto 20px;overflow:hidden;}
+.tour3btns1 ul{list-style:none;float:right;margin:0;padding:0 0 1px 1px;}
+.tour3btns1 li{display:table;float:left;margin:0 0 -1px -1px;padding:0;}
+.tour3btns1 li .button{display:table-cell;height:50px;
+	margin:0;
+	padding:0 .833em;
+	background:#fff !important;
+	border:1px solid #000;
+	color:#302f34 !important;
+	font-size:14px;
+	text-decoration:none;
+	vertical-align:middle;
+}
+.tour3btns1 .t1{vertical-align:middle;}
+.tour3btns1 .ic1{display:inline-block;
+	width:40px;height:40px;
+	background:url() no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.tour3btns1 .ic1.video1{background-image:url(../../img/lib1tour3/ic80s1film1.png);}
+.tour3btns1 .ic1.vr1{background-image:url(../../img/lib1tour3/ic80s1play1.png);}
+.tour3btns1 .ic1.ebook1{background-image:url(../../img/lib1tour3/ic80s1ebook1.png);}
+.tour3btns1 .ic1.prev1{margin:0 -10px;background-image:url(../../img/lib1tour3/ic80s1a1left1.png);}
+.tour3btns1 .ic1.next1{margin:0 -10px;background-image:url(../../img/lib1tour3/ic80s1a1right1.png);}
+.tour3btns1 .ic1.fullschedule1{background-image:url(../../img/lib1tour3/ic80s1calendar1.png);}
+
+
+
+/* 버튼모음.픽1글1.세로정렬. 20161202 20161214 */
+.tour3btns2{display:block;position:relative;margin:1em auto 3em;text-align:center;overflow:hidden;}
+.tour3btns2 .button{margin-left:.166em;margin-right:.166em;
+	border-color:#0072ba;
+	background-color:#0085d2;
+}
+.tour3btns2 .t1{vertical-align:middle;}
+.tour3btns2 .ic1{display:inline-block;
+	width:40px;height:40px;
+	margin-left:-.75em;
+	background:url() no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.tour3btns2 .ic1.add1schedule1{background-image:url(../../img/lib1tour3/ic80s2c2add1schedule1.png);}
+.tour3btns2 .ic1.ask1stamp1{background-image:url(../../img/lib1tour3/ic80s2c2ask1stamp1.png);}
+.tour3btns2 .ic1.ship1{background-image:url(../../img/lib1tour3/ic80s2c2anchor1.png);}
+.tour3btns2 a:focus{outline:1px dotted #ff0000;}
+
+/* 버튼모음.픽1글1.블럭2. 20161202 */
+.tour3btns3.even-grid{}
+.tour3btns3 .column{}
+.tour3btns3 .button{width:100%;height:auto;
+	padding-left:0;padding-right:0;
+	border-color:#d7d7d7;
+	background-color:#f7f7f7 !important;
+	color:#888 !important;
+	font-weight:600;
+	text-align:center;
+}
+.tour3btns3 .button .t1{display:block;margin:.166em 0 0;}
+.tour3btns3 .button .ic1{display:block;width:20px;height:20px;margin:0 auto;
+	background:url() no-repeat center center;
+	background-size:contain;
+}
+.tour3btns3 .button .ic1.homepage{background-image:url(../../img/lib1tour3/ic40s2home1.png);}
+.tour3btns3 .button .ic1.phone{background-image:url(../../img/lib1tour3/ic40s2phone1.png);}
+.tour3btns3 .button .ic1.getdirections{background-image:url(../../img/lib1tour3/ic40s2mapmarker1road1.png);}
+
+
+/* 더보기 20161212 */
+.button.tour3more{border-color:#f0f1f2;
+	background-color:#f0f1f2 !important;
+	color:#000 !important;
+}
+.button.tour3more:after{content:'';display:inline-block;
+	width:0;height:0;margin:-2px .25em;border:4px solid transparent;border-top-color:#000;overflow:hidden;text-indent:100%;
+}
+
+
+/* 월내비 20161202 */
+.tour3month1{position:relative;width:6em;margin:.666em auto;padding:0 40px;font-size:2.286em;line-height:1.333;text-align:center;}
+.tour3month1 .h1{margin:0;padding:0;background:transparent;
+	color:#000;
+	font-weight:500;
+}
+.tour3month1 .em{color:#000;}
+.tour3month1 .b1{float:left;position:absolute;top:50%;width:30px;height:30px;
+	margin:-15px 0;
+	padding:0;border-radius:0;border:0;background:transparent;line-height:1;vertical-align:middle;text-decoration:none;cursor:pointer;overflow:visible;
+}
+.tour3month1 .b1.prev{left:0;}
+.tour3month1 .b1.next{right:0;}
+.tour3month1 .b1>.ic1{float:left;position:absolute;left:50%;top:50%;width:100%;height:100%;margin:-50%;
+	background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.tour3month1 .b1.prev>.ic1{background-image:url(../../img/lib1tour3/ic60s1left1.png);}
+.tour3month1 .b1.next>.ic1{background-image:url(../../img/lib1tour3/ic60s1right1.png);}
+
+
+/* .tour3hb1 20161128 */
+.tour3hb1.h2{
+	margin:1em 0 20px;
+	padding:0 0 .666em;
+	border-bottom:1px solid #302f34;
+	color:#302f34;
+	font-weight:500;
+	/* background:url(../../img/lib/h2bg.png) no-repeat; */
+	font-size:1.857em; /* =26/14 */
+}
+
+
+/* List Bullet Icon 20161202 */
+ul.bi1notice1{list-style:none;margin:0;padding:0;font-size:.929em;}
+ul.bi1notice1 li{margin:0 0 .166em;padding:0 0 0 24px;
+	color:#666;
+}
+ul.bi1notice1 li:before{content:'';display:inline-block;
+	width:20px;height:20px;
+	margin:-2px 4px 0 -26px;
+	background:url(../../img/lib1tour3/ic20s1notice1.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+html.Mobile ul.bi1notice1 li:before{
+	background-image:url(../../img/lib1tour3/ic20s1notice1@3x.png); /* 3배수px */
+}
+
+
+/* 수평선 20161202 */
+.line5pattern1{display:block;position:relative;
+	height:5px;
+	margin:1em 0;
+	border:0;
+	background:url(../../img/lib1tour3/b.000000.pattern1.png);
+	overflow:hidden;
+	opacity:.2;
+}
+
+
+/* 공공누리 20161128 */
+.kogl1{position:relative;}
+.kogl1 .p1{display:inline-block;margin:0 16px 0 0;vertical-align:middle;}
+.kogl1 .t1{display:inline-block;vertical-align:middle;}
+
+
+/* 여행맵 20170210 */
+.tour3map1{z-index:1;position:relative;height:360px;margin:0 auto 10px;border-radius:0;background:#d1d7db;overflow:hidden;}
+.tour3map1 img{max-width:none;} /* 20160919 */
+.tour3map1 #daum_map{ /* ★ 맵API 보정 */
+	position:absolute !important;left:0;right:0;top:0;bottom:0;width:100%;height:100%;
+}
+/* 맵마커.여기 */
+.tour3map1marker1here1{display:inline-block;
+	z-index:10;
+	position:absolute;left:50%;top:50%; /* 맵마커 가리키는 곳 */
+	width:50px;height:40px;
+	margin:-40px 0 0 -25px; /* 가리키는 곳에서 이거 좌상단거리 */
+	background:url(../../img/lib1tour3/ic100mapmarker1here1.png) no-repeat center center;
+	background-size:contain;
+}
+/* 맵마커.번호 */
+.tour3map1marker1{display:inline-block;
+	z-index:10;
+	position:absolute;left:50%;top:50%; /* 맵마커 가리키는 곳 */
+	width:50px;height:32px;
+	margin:-40px 0 0 -25px; /* 가리키는 곳에서 이거 좌상단거리 */
+	padding:8px 0 0;
+	background:url(../../img/lib1tour3/ic100mapmarker1bg.png) no-repeat center center;background-size:contain;
+	color:#fff;font:bold 16px helvatica,arial,sans-serif;text-align:center;
+	letter-spacing:0;
+	overflow:hidden;
+}
+/* 맵레이어박스 */
+.tour3map1layer1{z-index:100;position:absolute;left:50%;top:50%;
+	width:240px;
+	min-height:296px;
+	margin:-148px 0 0 -120px;
+	padding:0;
+	line-height:1.333;overflow:hidden;
+}
+.tour3map1layer1 img{max-width:100%;} /* 20160919 */
+.tour3map1layer1 .wrap1{display:block;position:relative;
+	padding:0 .666em;
+	border:1px solid #333;
+	border-radius:5px;
+	background:#fff;
+	overflow:hidden;
+}
+.tour3map1layer1 .a1{display:block;height:100%;text-decoration:none;}
+.tour3map1layer1 .hg1{position:relative;margin:0 -.666em;padding:0 .666em;border-top:1px solid #e7e7e7;}
+.tour3map1layer1 .h1{display:block;margin:.666em 30px .666em 0;padding:0;color:#333;font-weight:bold;font-size:1.071em;}
+.tour3map1layer1 .f1{display:block;position:relative;width:100%;height:auto;margin:0 auto;padding:0 0 56.25% 0;background:#fff;text-align:center;}
+.tour3map1layer1 .f1 .f1p1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;height:100%;overflow:hidden;}
+.tour3map1layer1 .f1 img{display:block;position:absolute;left:0;top:0;width:100%;height:auto;min-height:100%;margin:0 auto;}
+.tour3map1layer1 .text1{display:block;min-height:1.333em;padding:.666em 0;color:#666;font-size:.929em;overflow:hidden;}
+.tour3map1layer1 .text1 .t1{float:left;width:100%;}
+.tour3map1layer1 .btns{display:block;margin:0 0 10px;}
+.tour3map1layer1 .btns .button{width:49%;}
+.tour3map1layer1 .b1.close{float:left;position:absolute;right:0;top:0;width:40px;height:40px;
+	background:transparent;
+	border:0;
+	color:#999;
+	font:normal 40px helvatica,arial,sans-serif;
+	text-decoration:none;
+	line-height:40px;
+	text-align:center;
+}
+/* 맵레이어박스 맵마커.번호 */
+.tour3map1layer1 .tour3map1marker1{display:block;
+	position:relative;left:0;top:0;
+	margin:5px auto;
+}
+
+
+/* 복합박스.가변1가변1.세로정렬 20161212 20161214 */
+/* 앞글장식 (물때정보, ..) */
+.hybrid1box1{display:block;
+	position:relative;
+	padding:1.5em;
+}
+.hybrid1box1:before,
+.hybrid1box1:after{content:'';display:table;clear:both;}
+.hybrid1box1>.column1{float:left;
+	position:relative;
+	width:12.5%; /* =110/(910-15*2) */
+	margin:0;padding:0;
+}
+.hybrid1box1>.column2{display:table-cell;
+	position:relative;
+	width:9999px;
+	height:70px; /* = deco1 최대높이 */
+	margin:0;padding:0;
+	vertical-align:middle;
+}
+.hybrid1box1>.column1>[class*='deco']{display:block;
+	width:66.666%; /* >=70/110 */
+	height:70px;
+	max-width:70px;
+	margin:0 auto;
+	background:url(../../img/lib1tour3/ic140s1speechbubble1.png) no-repeat top center;
+	background-size:contain;
+}
+/* .skin2 (배편안내 목록 조회) */
+.hybrid1box1.skin2>.column1{
+	width:22.5%; /* =186/(860-15*2) */
+}
+.hybrid1box1.skin2>.column2{
+	height:120px; /* = deco1 최대높이 */
+}
+.hybrid1box1.skin2>.column1>[class*='deco']{display:block;
+	width:66.666%; /* >=120/186 */
+	max-width:120px;
+	height:120px;
+}
+/* .skin3 (등산코스 및 소요시간) */
+.hybrid1box1.skin3{margin:1em 0;padding:1em 0;border-top:1px solid #dee0e3;border-bottom:1px solid #dee0e3;}
+.hybrid1box1.skin3>.column1{
+	width:17.582%; /* =160/(910-0*2) */
+}
+.hybrid1box1.skin3>.column2{
+	height:120px; /* = deco1 최대높이 */
+}
+.hybrid1box1.skin3>.column1>[class*='deco']{display:block;
+	width:76%; /* >=120/160 */
+	max-width:120px;
+	height:120px;
+}
+/* .skin4 (나의 여행 스케줄 이용안내) */
+.hybrid1box1.skin4{position:relative;
+	padding:30px;
+	background:#434159;
+	color:#fff;
+}
+.hybrid1box1.skin4>.column1{
+	width:21.591%; /* =190/(910-30*1) */
+	margin:0 0 0 -30px;
+}
+.hybrid1box1.skin4>.column2{
+	height:120px; /* = deco1 최대높이 */
+}
+.hybrid1box1.skin4>.column1>[class*='deco']{display:block;
+	width:63.158%; /* >=120/190 */
+	max-width:120px;
+	height:120px;
+}
+/* .skin5 (여행 Tip!) */
+.hybrid1box1.skin5{position:relative;
+	padding:16px 0;
+	border:4px solid #0e99a8;
+	background:#fff;
+}
+.hybrid1box1.skin5>.column1{
+	display:table-cell; /* ☆ */
+	float:none; /* ☆ */
+	height:70px;
+	margin:0;
+	padding:0 16px;
+	text-align:center;
+	vertical-align:middle;
+}
+.hybrid1box1.skin5>.column2{
+	height:70px; /* = .column1 높이 */
+}
+.hybrid1box1.skin5>.column1>.h1g{
+	display:block;
+	width:143px; /* =175-16*2 */
+	margin:0 auto;
+}
+.hybrid1box1.skin5>.column2>.texts{
+	height:auto;
+	position:relative;
+	padding:0 30px;
+}
+.hybrid1box1.skin5>.column2 .sep{
+	display:inline-block;float:left;position:absolute;left:0;top:0;bottom:0;width:0;height:100%;padding-left:0;border-left:1px solid #e4e4e4;
+}
+/* 장식이미지 */
+.hybrid1box1>.column1>.deco140speechbubble1{background-image:url(../../img/lib1tour3/ic140s1speechbubble1c2.png);}
+.hybrid1box1>.column1>.deco240search1{background-image:url(../../img/lib1tour3/ic240s2search1c2.png);}
+.hybrid1box1>.column1>.deco240milestone1{background-image:url(../../img/lib1tour3/ic240s1milestone1.png);}
+.hybrid1box1>.column1>.deco240scheduler1{background-image:url(../../img/lib1tour3/ic240s3scheduler1.png);}
+.hybrid1box1>.column1>.deco240scheduler2{background-image:url(../../img/lib1tour3/ic240s3scheduler2.png);}
+.hybrid1box1>.column1>.deco240stamp1{background-image:url(../../img/lib1tour3/ic240s3stamp1.png);}
+
+/* ◇◆ */
+@media all and (max-width:639px){
+	/* ☆ .hybrid1box1.skin숫자 등의 선택자 우선순위 유의! */
+	.hybrid1box1[class]>.column1[class][class]{ /* 높은우선순위 */
+		display:block;width:100%;max-width:100%;padding:0;
+	}
+	.hybrid1box1[class]>.column1{ /* 동등우선순위 ))) 스킨값 적용 */
+		margin:0 auto .666em;
+	}
+}
+
+
+/* 메뉴.(with .even-grid 20170110 */
+.tour3menu1{display:block;position:relative;padding:1px 0 0 1px;overflow:hidden;background:#f7f7f7 url(../../img/inc/b.000000.opacity.10.pattern4slash1.png);}
+.tour3menu1 .even-grid{}
+.tour3menu1 .even-grid>.column{}
+.tour3menu1 a{display:block;margin:-1px 0 0 -1px;padding:1em .25em;border:1px solid #ccc;background:#fff;color:#555;text-align:center;}
+.tour3menu1 a.on{border-color:#e9002d;background:#e9002d;color:#fff;font-weight:bold;}
+
+
+/* ◇◆ TOUR List */
+
+
+/* 여행.목록카드(제목1`글2`높이가변`설명목록) 20161212 20161214 */
+.tour3card1{display:block;position:relative;margin:0 0 1.5em 0;line-height:1.333;}
+.tour3card1 .wrap1{display:block;position:relative;border:1px solid #d4d7d9;overflow:hidden;
+	transition: .2s ease-out;border-radius:6px;
+}
+.tour3card1 .wrap1:hover{border-color:#333;box-shadow:0 0 5px 0 rgba(0, 0, 0, .1);}
+.tour3card1 .wrap1:hover a{text-decoration:none;}
+.tour3card1 .wrap1g1{display:block;}
+.tour3card1 .wrap1g2{display:block;padding:10px;border-top:1px solid #e5e7e9;color:#666;}
+.tour3card1 .wrap1g3{display:block;padding:10px;border-top:1px solid #e5e7e9;background:#f7f8f9;color:#567;}
+.tour3card1 .text1{display:block;padding:18px 10px 18px 50px;overflow:hidden;}
+.tour3card1 .text1 .ic1{float:left;position:absolute;left:0;top:10px;
+	width:50px;height:32px;
+	padding:8px 0 0;
+	background:url(../../img/lib1tour3/ic100mapmarker1bg.png) no-repeat center center;background-size:contain;
+	color:#fff;font:bold 16px helvatica,arial,sans-serif;text-align:center;
+	letter-spacing:0;
+	overflow:hidden;
+}
+.tour3card1 .text1 .t1{display:block;color:#080;font-weight:normal;font-size:.857em;overflow:hidden;}
+.tour3card1 .text1 .h1{display:block;color:#000;font-weight:500;font-size:1.143em;
+	/* text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden; */
+}
+.tour3card1 .f1{display:block;position:relative;width:100%;margin:0 auto -1px;
+	padding:0 0 62.5% 0; /* =10/16 */
+	background:#eee;
+	overflow:hidden;
+}
+.tour3card1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.tour3card1 .f1 img{display:block;position:relative;
+	width:auto;height:100%;min-width:34%;max-width:100%;
+	margin:0 auto;
+}
+.tour3card1 .f1ic1{float:left;position:absolute;right:9px;bottom:9px;width:72px;height:72px;
+	border-radius:9999px;
+	background:url() no-repeat center center;background-size:contain;
+	overflow:hidden;text-indent:-9999px;
+}
+.tour3card1 .f1ic1.stamp1{background-image:url(../../img/lib1tour3/ic144s1stamp1.png);}
+.tour3card1 .f1ic1.stamp2{background-image:url(../../img/lib1tour3/ic144s1stamp2.png);}
+.tour3card1 .f1ic1.approving1{background-image:url(../../img/lib1tour3/ic144s1approving1.png);}
+.tour3card1 .a2{display:block;position:relative;margin:.333em 0;padding:0 0 0 25px;color:#666;}
+.tour3card1 .a2 .ic1{float:left;position:absolute;left:0;top:0;width:20px;height:20px;
+	border-radius:9999px;
+	background:#eee url() no-repeat center center;background-size:contain;
+	overflow:hidden;text-indent:-9999px;
+}
+.tour3card1 .a2.address .ic1{background-image:url(../../img/lib1tour3/ic40s1mapmarker1.png);}
+.tour3card1 .a2.phone .ic1{background-image:url(../../img/lib1tour3/ic40s1phone1.png);}
+.tour3card1 .a2.date .ic1{background-image:url(../../img/lib1tour3/ic40s1calendar1.png);}
+.tour3card1 .a2.time .ic1{background-image:url(../../img/lib1tour3/ic40s1clock1.png);}
+.tour3card1 .a2.management .ic1{background-image:url(../../img/lib1tour3/ic40s1gear1.png);}
+.tour3card1 .a2.island .ic1{background-image:url(../../img/lib1tour3/ic40s1island1.png);/* 20170220 추가 */}
+.tour3card1 .a2 .t1{display:block;padding:2px 0 1px;}
+.tour3card1 .wrap1g3 .h1{display:block;margin:0 0 .666em;padding:0 0 .666em;border-bottom:1px dotted #ddd;}
+.tour3card1 .lst2{display:block;list-style:none;clear:both;margin:0;padding:0;font-size:.929em;}
+.tour3card1 .li2{padding:0 0 .333em 10px;background:url(../../img/lib1tour3/bu1.png) no-repeat 3px 7px;}
+.tour3card1 .li2 .a3{display:block;height:1.333em;padding:0 3.3em 0 0;color:#666;overflow:hidden;}
+.tour3card1 .li2 .a3 .t1{float:left;width:100%;
+	text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;
+}
+.tour3card1 .li2 .a3 .t2{float:right;width:3.3em;margin:0 -3.3em 0 0;text-align:right;}
+/* [IE8]fix */
+.tour3card1 .a2 .ic1 img{display:block;position:static !important;margin:0 auto;}
+
+/* .wrap1g4 별점. 20170804 */
+.wrap1g4{position:relative;display:block;margin:.666em 0;padding:0 0 0 8em;}
+.wrap1g4:before,
+.wrap1g4:after{content:'';display:table;clear:both;}
+.wrap1g4>.column1{float:left;width:8em;margin:0 0 0 -8em;padding:0;text-align:center;}
+.wrap1g4>.column2{float:left;width:100%;padding:1px 0 0;}
+.wrap1g4>.column1>.h1{color:#fe5a30;font-size:50px;font-weight:600;}
+.wrap1g4>.column2>.dl1{list-style:none;display:block;position:relative;margin:.333em auto;padding:0;line-height:1.333;}
+.wrap1g4>.column2>.dl1 .di{display:block;margin:.333em 0;padding:1px 0 0 3.5em;overflow:hidden;}
+.wrap1g4>.column2>.dl1 .dt{float:left;width:3.5em;margin:0 0 0 -3.5em;font-size:13px;color:#000;}
+.wrap1g4>.column2>.dl1 .dd{float:left;width:100%;padding:0;}
+.wrap1g4>.column2>.dl1 .dt .t1{vertical-align:middle;}
+
+.rating1star5[data-value='0']>.ic1{width:0;}
+.rating1star5[data-value='10']>.ic1{width:10%;}
+.rating1star5[data-value='20']>.ic1{width:20%;}
+.rating1star5[data-value='30']>.ic1{width:30%;}
+.rating1star5[data-value='40']>.ic1{width:40%;}
+.rating1star5[data-value='50']>.ic1{width:50%;}
+.rating1star5[data-value='60']>.ic1{width:60%;}
+.rating1star5[data-value='70']>.ic1{width:70%;}
+.rating1star5[data-value='80']>.ic1{width:80%;}
+.rating1star5[data-value='90']>.ic1{width:90%;}
+.rating1star5[data-value='100']>.ic1{width:100%;}
+/* 스케일 */
+.rating1star5.w84{width:84px;height:14px;}
+.rating1star5.w96{width:96px;height:16px;}
+/* [~IE8]fix */
+.rating1star5>.ic1 img{max-width:none;}
+.rating1star5.w84 img{width:84px !important;height:14px !important;}
+.rating1star5.w96 img{width:96px !important;height:16px !important;}
+
+/* 여행.목록카드(열2)(그림1.링크3.버튼1) 20151214 */
+.tour3card2{display:block;position:relative;margin:0 0 1.5em 0;line-height:1.333;}
+.tour3card2 a.f1[href]:focus{outline:1px dotted #000;}
+.tour3card2 .lst1{list-style:none;margin:0;padding:0;overflow:hidden;}
+.tour3card2 .li1{margin:0;padding:0;}
+.tour3card2 .li1 .wrap1{display:block;position:relative;
+	padding:14px 0 6px;
+	border-bottom:1px dotted #d7d7d7;
+	overflow:hidden;
+}
+.tour3card2 .li1 .f1{float:left;position:relative;
+	width:130px;height:80px;
+	background:#eee;
+	overflow:hidden;
+}
+.tour3card2 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.tour3card2 .li1 .f1 img{display:block;position:relative;
+	width:auto;height:100%;min-width:34%;max-width:100%;
+	margin:0 auto;
+}
+.tour3card2 .li1 .f1+.wrap1texts{display:table-cell;width:9999px;padding:0 0 0 20px;}
+.tour3card2 .li1 .a1{display:block;position:relative;
+	margin:-2px 0 0; /* ☆ */
+	padding:0 0 0 30px; /* (40-10) 그림자 고려 */
+	color:#333;font-size:1.143em;
+}
+.tour3card2 .li1 .a1>.ic1{float:left;position:absolute;left:0;top:0;
+	width:40px;height:26px;
+	margin:0 -10px; /* 그림자 고려 */
+	padding:6px 0 0 0;
+	background:url(../../img/lib1tour3/ic100mapmarker1bg.png) no-repeat center center;
+	background-size:contain;
+	color:#fff;
+	font:bold 12px arial, sans-serif;
+	text-align:center;
+	overflow:hidden;
+}
+.tour3card2 .li1 .a1>.t1{display:block;padding:3px 0;}
+.tour3card2 .li1 .a2,
+.tour3card2 .li1 .a3{display:block;position:relative;margin:.666em 0;padding:0 0 0 25px;color:#666;font-size:.929em;}
+.tour3card2 .li1 .a2>.ic1,
+.tour3card2 .li1 .a3>.ic1{float:left;position:absolute;left:0;top:0;width:20px;height:20px;
+	border-radius:50%;
+	background:#eee url() no-repeat center center;
+	background-size:contain;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.tour3card2 .li1 .a2>.ic1{background-image:url(../../img/lib1tour3/ic40s1mapmarker1.png);}
+.tour3card2 .li1 .a3>.ic1{background-image:url(../../img/lib1tour3/ic40s1phone1.png);}
+.tour3card2 .li1 .a2>.t1,
+.tour3card2 .li1 .a3>.t1{display:block;padding:2px 0 0;}
+.tour3card2 .li1 .b1.detail{display:none;float:left;position:absolute;
+	right:0;
+	top:33px; /* =14+(80-42)/2 */
+	width:40px;height:40px;
+	border:1px solid #dde1e5;
+}
+.tour3card2 .li1 .b1.detail>.ic1{float:left;position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;
+	background:url(../../img/lib1tour3/ic40s3search1.png) no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+
+
+/* 여행.목록카드(글3) 20161206 */
+.tour3card3{display:block;position:relative;margin:0 0 1.5em 0;line-height:1.333;}
+.tour3card3 .wrap1{display:block;position:relative;
+	padding:9.5%; /* =20/210 */
+	border:1px solid #d4d7d9;
+	overflow:hidden;
+	transition: .2s ease-out;
+}
+.tour3card3 .wrap1:hover{border-color:#333;box-shadow:0 0 5px 0 rgba(0, 0, 0, .1);}
+.tour3card3 .wrap1:hover a{text-decoration:none;}
+.tour3card3 .text1{}
+.tour3card3 .text1 .t1{display:inline-block;color:#ea0630;
+	padding:.25em .75em;
+	border:1px solid #ea0630;
+	font-weight:normal;font-size:.786em;overflow:hidden;
+}
+.tour3card3 .text1 .t2{display:block;margin:.333em 0;color:#333;font-weight:600;font-size:1.429em;}
+.tour3card3 .text1 .t3{display:block;color:#666;font-weight:400;font-size:1.143em;letter-spacing:0;}
+
+
+/* ◇◆ TOUR View */
+
+
+/* 그림뷰갤러리.나열형.섬네일페이징(())반응형배치. 20170109 */
+.pic1gallery3{position:relative;margin:0 auto 1em;}
+.pic1gallery3 *{list-style:none;margin:0;padding:0;border:0;}
+.pic1gallery3:before,
+.pic1gallery3:after{content:'';display:table;clear:both;}
+.pic1gallery3 .column{}
+/* 대표(선택)이미지 */
+.pic1gallery3 .figure{z-index:10;position:relative;width:100%;margin:0 auto 1em;overflow:hidden;}
+.pic1gallery3 .figure>.p1{background:#f7f8f9;overflow:hidden;}
+.pic1gallery3 .figure>.p1>img{display:block;width:auto;height:auto;min-width:0;max-width:100%;min-height:0;
+	max-height:924px; /* =:=(999-16)*0.94*1 */
+	margin:0 auto;
+}
+.pic1gallery3 .figure>.figcaption{z-index:10;position:absolute;left:0;right:0;bottom:0;
+	padding:.666em;
+	background:url(../../img/lib1tour3/b.000000.opacity.60.png);
+	color:#fff;font-size:.929em;line-height:1.333;
+}
+/* 이전다음 */
+.pic1gallery3 .mControl{}
+.pic1gallery3 .mControl .b{z-index:10;position:absolute;top:0;bottom:0;width:25px;height:100%;
+	background:url(../../img/lib1tour3/b.ffffff.opacity.50.png);
+	color:#000;
+	font-family:Arial, sans-serif; /* ☆ */
+	font-size:60px;
+	opacity:.2;
+	transition:.2s ease-out;
+}
+.pic1gallery3 .mControl .b.prev{left:0;}
+.pic1gallery3 .mControl .b.next{right:0;}
+.pic1gallery3 .mControl .b:hover,
+.pic1gallery3 .mControl .b:focus{opacity:1;}
+/* 섬네일 */
+.pic1gallery3 .wrap1mNum{margin:0 -8px 0 0;}
+.pic1gallery3 .mNum{position:relative;
+	padding:0 0 12.602%; /* =:=(124/164)/6 */
+	overflow:hidden;
+}
+.pic1gallery3 .mNum ul{position:absolute;left:0;right:0;top:0;overflow:hidden;}
+.pic1gallery3 .mNum li{float:left;
+	position:relative;
+	width:16.666%; /* =1/6 */
+	padding:0 0 12.602%; /* =:=(124/164)/6 */
+	overflow:hidden;
+}
+.pic1gallery3 li>a.f1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;
+	min-height:0;
+	margin:0 8px 8px 0;
+	background:url(../../img/lib1tour3/noimage.png) no-repeat center center;background-size:contain;
+	border:3px solid #f0f1f2;
+	text-decoration:none;
+	/* overflow:hidden; */
+	transition:.2s ease-out;
+}
+.pic1gallery3 li>a.f1 .f1p1{display:block;
+	z-index:10;position:absolute;left:0;right:0;top:0;bottom:0;
+	min-height:0;
+	margin:-2px;
+	overflow:hidden;
+}
+.pic1gallery3 li>a.f1 img{display:block;position:absolute;left:0;top:0;bottom:0;width:100%;height:auto;min-height:100%;vertical-align:top;}
+.pic1gallery3 li.on>a.f1[href]{border-color:#37a235;overflow:hidden;}
+.pic1gallery3 li>a.f1[href]:focus{border-color:#ea0;overflow:hidden;}
+/* [FF]bug) :before 에 border 만들면 두번 클릭해야 한다.
+.pic1gallery3 li>a.f1:before{content:'';display:block;
+	z-index:10;position:absolute;left:0;right:0;top:0;bottom:0;
+	border:3px solid #f0f1f2;
+} */
+/* 유연한 쪽수 매김 */
+.pic1gallery3 .mPageNum{display:block;margin:4px 0;padding:0;font-size:0;line-height:0;text-align:center;}
+.pic1gallery3 .mPageNum .m{display:inline-block;position:relative;
+	width:18px;height:18px;
+	margin:0;padding:0;border-radius:0;border:0;background:transparent;line-height:1;vertical-align:middle;cursor:pointer;overflow:visible;
+}
+.pic1gallery3 .mPageNum .m:before{content:'';
+	float:left;position:absolute;left:50%;top:50%;
+	width:10px;height:10px;margin:-5px;
+	border-radius:9999px;
+	background:#d4d6d8;
+}
+.pic1gallery3 .mPageNum .m.on:before{background:#3b3a40;}
+
+
+/* 그림뷰갤러리.나열형.섬네일페이징(())고정형배치. 20170109. 20170117. 20170215 */
+.pic1gallery4{position:relative;margin:0 auto 1em;}
+.pic1gallery4 *{list-style:none;margin:0;padding:0;border:0;}
+.pic1gallery4:before,
+.pic1gallery4:after{content:'';display:table;clear:both;}
+.pic1gallery4 .column{}
+/* 대표(선택)이미지 */
+.pic1gallery4 .figure{z-index:10;position:relative;width:100%;margin:0 auto 1em;overflow:hidden;}
+.pic1gallery4 .figure>.p1{background:#f7f8f9;overflow:hidden;}
+.pic1gallery4 .figure>.p1>img{display:block;width:auto;height:auto;min-width:0;max-width:100%;min-height:0;
+	max-height:924px; /* =:=(999-16)*0.94*1 */
+	margin:0 auto;
+}
+.pic1gallery4 .figure>.figcaption{z-index:10;
+	position:absolute; /* ☆ */
+	left:0;right:0;bottom:0;
+	padding:.666em;
+	background:url(../../img/lib1tour3/b.000000.opacity.60.png);
+	color:#fff;font-size:.929em;line-height:1.333;
+}
+/* 이전다음 */
+.pic1gallery4 .mControl{}
+.pic1gallery4 .mControl .b{z-index:10;position:absolute;top:0;bottom:0;width:25px;height:100%;
+	background:url(../../img/lib1tour3/b.ffffff.opacity.50.png);
+	color:#000;
+	font-family:Arial, sans-serif; /* ☆ */
+	font-size:60px;
+	opacity:.2;
+	transition:.2s ease-out;
+}
+.pic1gallery4 .mControl .b.prev{left:0;}
+.pic1gallery4 .mControl .b.next{right:0;}
+.pic1gallery4 .mControl .b:hover,
+.pic1gallery4 .mControl .b:focus{opacity:1;}
+/* 섬네일 */
+.pic1gallery4 .wrap1mNum{margin:0 -8px 0 0;}
+.pic1gallery4 .mNum{position:relative;
+	padding:0 0 12.602%; /* =:=(124/164)/6 */
+	overflow:hidden;
+}
+.pic1gallery4 .mNum ul{position:absolute;left:0;right:0;top:0;overflow:hidden;}
+.pic1gallery4 .mNum li{float:left;
+	position:relative;
+	width:16.666%; /* =1/6 */
+	padding:0 0 12.602%; /* =:=(124/164)/6 */
+	overflow:hidden;
+}
+.pic1gallery4 li>a.f1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;
+	min-height:0;
+	margin:0 8px 8px 0;
+	background:url(../../img/lib1tour3/noimage.png) no-repeat center center;background-size:contain;
+	border:3px solid #f0f1f2;
+	text-decoration:none;
+	/* overflow:hidden; */
+	transition:.2s ease-out;
+}
+.pic1gallery4 li>a.f1 .f1p1{display:block;
+	z-index:10;position:absolute;left:0;right:0;top:0;bottom:0;
+	min-height:0;
+	margin:-2px;
+	overflow:hidden;
+}
+.pic1gallery4 li>a.f1 img{display:block;position:absolute;left:0;top:0;bottom:0;width:100%;height:auto;min-height:100%;vertical-align:top;}
+.pic1gallery4 li.on>a.f1[href]{border-color:#ef6e17;overflow:hidden;}
+.pic1gallery4 li>a.f1[href]:focus{border-color:#ea0;overflow:hidden;}
+/* 유연한 쪽수 매김 */
+.pic1gallery4 .mPageNum{display:block;margin:4px 0;padding:0;font-size:0;line-height:0;text-align:center;}
+.pic1gallery4 .mPageNum .m{display:inline-block;position:relative;
+	width:18px;height:18px;
+	margin:0;padding:0;border-radius:0;border:0;background:transparent;line-height:1;vertical-align:middle;cursor:pointer;overflow:visible;
+}
+.pic1gallery4 .mPageNum .m:before{content:'';
+	float:left;position:absolute;left:50%;top:50%;
+	width:10px;height:10px;margin:-5px;
+	border-radius:9999px;
+	background:#d4d6d8;
+}
+.pic1gallery4 .mPageNum .m.on:before{background:#3b3a40;}
+
+
+/* 여행.상세뷰(그림1.링크3.버튼1) 20161205 */
+.tour3view1{} /* 예비용(20161205.현재스타일없음) */
+/* 기본정보 */
+.tour3info1{display:block;clear:both;position:relative;margin:0 0 -1px;padding:1em 0;border-top:1px dotted #d7d7d7;border-bottom:1px dotted #d7d7d7;}
+.tour3info1 .dl1{list-style:none;display:block;position:relative;margin:.333em 0;padding:0;line-height:1.333;}
+.tour3info1 .dl1 .di{display:block;margin:.333em 0;padding:0 0 0 6.5em;overflow:hidden;}
+.tour3info1 .dl1 .dt{float:left;width:6.5em;margin:0 0 0 -6.5em;}
+.tour3info1 .dl1 .dd{float:left;width:100%;padding:1px 0 0;}
+.tour3info1 .dl1 .dt .t1{vertical-align:middle;}
+.tour3info1 .dl1 .dt .ic1{display:inline-block;
+	width:1.429em;height:1.429em;
+	margin:0 .333em 0 0;
+	border-radius:50%;
+	background:#eee url() no-repeat center center;background-size:contain;
+	vertical-align:middle;
+}
+.tour3info1 .dl1 .location .ic1{background-image:url(../../img/lib1tour3/ic40s1mapmarker1.png);}
+.tour3info1 .dl1 .management .ic1{background-image:url(../../img/lib1tour3/ic40s1gear1.png);}
+.tour3info1 .dl1 .phone .ic1{background-image:url(../../img/lib1tour3/ic40s1phone1.png);}
+.tour3info1 .dl1 .room_count .ic1{background-image:url(../../img/lib1tour3/ic40s1bed1.png);}
+.tour3info1 .dl1 .seat_count .ic1{background-image:url(../../img/lib1tour3/ic40s1spoon1.png);}
+.tour3info1 .dl1 .construction_year .ic1{background-image:url(../../img/lib1tour3/ic40s1clock1.png);}
+.tour3info1 .dl1 .time .ic1{background-image:url(../../img/lib1tour3/ic40s1clock1.png);}
+.tour3info1 .dl1 .homepage .ic1{background-image:url(../../img/lib1tour3/ic40s1home1.png);}
+.tour3info1 .dl1 .region .ic1{background-image:url(../../img/lib1tour3/ic40s1star1.png);}
+.tour3info1 .dl1 .area .ic1{background-image:url(../../img/lib1tour3/ic40s1ruler1.png);}
+.tour3info1 .dl1 .population .ic1{background-image:url(../../img/lib1tour3/ic40s1person1.png);}
+.tour3info1 .dl1 .period .ic1{background-image:url(../../img/lib1tour3/ic40s1calendar1.png);}
+.tour3info1 .dl1 .price .ic1{background-image:url(../../img/lib1tour3/ic40s1price1.png);}
+.tour3info1 .dl1 .park .ic1{background-image:url(../../img/lib1tour3/ic40s1park1.png);}
+.tour3info1 .dl1 .island .ic1{background-image:url(../../img/lib1tour3/ic40s1island1.png);/* 20170220 추가 */}
+/* 내용 */
+.tour3substance1{padding:.666em 0;border-top:1px dotted #d7d7d7;}
+
+/* .tour3info2 평점과 후기. 20170804 */
+.tour3info2{position:relative;display:block;margin:0;padding:0 0 0 11em;border-top:1px dotted #d7d7d7;}
+.tour3info2:before,
+.tour3info2:after{content:'';display:table;clear:both;}
+.tour3info2>.column1{float:left;width:11em;margin:0 0 0 -11em;padding:0;text-align:center;}
+.tour3info2>.column2{float:left;width:100%;padding:1px 0 0;}
+.tour3info2>.column1>.h1{color:#fe5a30;font-size:60px;font-weight:600;margin:0;}
+.tour3info2>.column2>.dl1{list-style:none;display:block;position:relative;margin:1.333em auto;padding:0;line-height:1.333;}
+.tour3info2>.column2>.dl1 .di{display:block;margin:.333em 0;padding:1px 0 0 4.5em;overflow:hidden;}
+.tour3info2>.column2>.dl1 .dt{float:left;width:4.5em;margin:0 0 0 -4.5em;font-size:14px;color:#000;}
+.tour3info2>.column2>.dl1 .dd{float:left;width:100%;padding:0;}
+.tour3info2>.column2>.dl1 .dt .t1{vertical-align:middle;}
+
+.review1{clear:both;position:relative;margin:0;padding:1em 0;border-top:1px dotted #cacdd3;background:#fff;font-size:13px;line-height:1.333;}
+.review1 *{vertical-align:middle;}
+.review1 fieldset{position:relative;margin:0;padding:0;}
+.review1 legend{}
+.review1 .rating1star5{margin:-2px 0;}
+.review1 .question{margin:0;padding:0;font-size:16px;}
+.review1 .form-text1{display:inline-block;margin-right:1em;color:#152475;font-weight:600;}
+.review1 .form-btns{display:inline-block;}
+.review1 dl.answer{position:relative;padding:0;}
+.review1 .grade{margin:0;padding:0;color:#333;font-weight:600;font-size:14px;}
+.review1 .grade label{padding-left:.2em;margin-right:.666em;}
+.review1 .grade input[type='radio']{}
+.review1 dl.opinion{position:relative;margin:0;padding:0;overflow:hidden;}
+.review1 dd.opinion{margin:0;padding:0;width:100%;}
+.review1 textarea{float:left;
+	width:100%;height:70px;
+	margin:8px 0;padding:6px 1px;
+	border:1px solid #b7b7b7;border-radius:0;background:#fff;color:#666;
+}
+.review1 .btns{float:right;width:100%;margin:0;overflow:hidden;}
+.review1 .bt1{display:inline-block;float:left;position:relative;box-sizing:border-box;width:100%;height:32px;margin:0;padding:0;border-radius:0;border:1px solid transparent;background:#515b6c;color:#fff !important;font-size:13px;text-decoration:none;text-align:center;transition:.2s ease-out;-webkit-appearance:none;-moz-appearance:none;}
+.review1 .bt1+.bt1{float:right;margin:0;background:#07c;}
+.review1 .bt1 .ic1{vertical-align:middle;}
+.review1 .bt1 .t1{vertical-align:middle;}
+@media all and (min-width:768px){
+	.review1{padding:10px 0;}
+	.review1 legend{display:block;position:static !important;overflow:visible;}
+	.review1 .answer{white-space:nowrap;}
+	.review1 dl.opinion{padding:0 90px 0 0;}
+	.review1 .btns{float:right;width:90px;margin:8px -90px 0 0;}
+	.review1 .bt1{height:70px;}
+}
+@media all and (min-width:1000px){
+	.review1 dl.answer{margin:0;}
+	.review1 dl.answer:before,
+	.review1 dl.answer:after{content:'';display:table;clear:both;}
+	.review1 dt.grade{float:left;width:5em;padding:8px 0 9px;}
+	.review1 dd.grade{float:left;}
+}
+
+.review1view1{clear:both;position:relative;border-top:0 solid #152475;border-bottom:0 solid #152475;}
+.review1view1>.h1:first-child{margin:0;padding:.666em 0 0;color:#333;font-weight:600;font-size:1.5em;line-height:1.333;border-top:1px solid #152475;}
+.review1view1 .info1{margin:0 0 -1px 0;padding:.666em 10px;border-top:0 solid #eaecee;border-bottom:1px solid #c8c8cc;background:#fff;overflow:hidden;}
+.review1view1 .info1 .t3{display:inline;padding:0 .5em 0 .6em;background:url(../../img/lib/sep1s.png) no-repeat 0 50%;}
+.review1view1 .info1 .t3:first-child{display:inline;padding-left:0;background:transparent;}
+.review1view1 .info1 .di{display:inline-block;margin:0;padding:0 4px;}
+.review1view1 .substance{background:#f7f8f8;border-top:1px solid #c8c8cc;border-bottom:1px solid #c8c8cc;padding:10px;}
+
+/* 블로그글목록 20161201 20161214 */
+.tour3blog1{position:relative;margin:1.333em 0;}
+.tour3blog1 .lst1{list-style:none;} /* even-grid */
+.tour3blog1 .li1{position:relative;} /* column */
+.tour3blog1 .li1>.wrap1{position:relative;border:1px solid #ccc;overflow:hidden;}
+.tour3blog1 .li1 a{color:#666;text-decoration:none;overflow:hidden;}
+.tour3blog1 .from{display:block;position:relative;height:25px;margin:20px 20px 10px;}
+.tour3blog1 .from .ic1{}
+.tour3blog1 .from .t1{display:block;height:20px;margin:3px 0 2px;color:#f6990c;font-size:.929em;
+	text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;
+}
+.tour3blog1 .wrap1g1{display:block;position:relative;margin:10px 20px 20px;}
+.tour3blog1 .wrap1g1 .t1{display:block;position:relative;height:4.5em;margin:0 0 .666em;color:#333;font-size:1.143em;line-height:1.5;overflow:hidden;}
+.tour3blog1 .wrap1g1 .t1:after{content:'…';
+	display:block;position:absolute;right:0;bottom:0;width:3em;height:1.5em;overflow:hidden;text-indent:-9999px;
+	background:linear-gradient(to right, rgba(255,255,255, 0) 0, #fff 100%);
+}
+.tour3blog1 .wrap1g1 .t2{display:block;position:relative;height:4.5em;margin:0 0 .666em;color:#666;font-size:.929em;line-height:1.5;overflow:hidden;}
+.tour3blog1 .wrap1g1 .t2:after{content:'…';
+	display:block;position:absolute;right:0;bottom:0;width:3em;height:1.5em;overflow:hidden;text-indent:-9999px;
+	background:linear-gradient(to right, rgba(255,255,255, 0) 0, #fff 100%);
+}
+.tour3blog1 .wrap1g1 .t3{display:block;color:#959595;font-size:.857em;letter-spacing:0;}
+.tour3blog1 .wrap1g1 .t3 .ic1{display:inline-block;
+	width:20px;height:20px;
+	margin:0 -3px 0 -4px;
+	background:url(../../img/lib1tour3/ic40s3clock1.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.tour3blog1 .wrap1g1 .t3t1{vertical-align:middle;}
+.tour3blog1 .from:hover .t1,
+.tour3blog1 .from:focus .t1{color:#059;}
+.tour3blog1 .wrap1g1:hover *,
+.tour3blog1 .wrap1g1:focus *{color:#000;}
+
+
+/* 주변정보 20161202. 스타일 없으나 예비용 */
+.tour3around1 .tour3map1{height:250px;} /* width 가 미디어쿼리 xlarge 보다 작은 경우 적용 */
+.tour3around2{}
+
+
+/* 라이트박스. 20161212 */
+/* 공통 */
+.tour3lightbox1{display:none;
+	z-index:100;
+	position:fixed;left:0;right:0;top:0;bottom:0;
+	background:url(../../img/lib1tour3/b.000000.opacity.60.png);
+	overflow:hidden;
+	overflow-y:auto;
+}
+.tour3lightbox1>.wrap1{display:block;
+	height:100%;
+	padding:0 10px;
+	text-align:center;
+}
+.tour3lightbox1>.wrap1:before{content:'';display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.tour3lightbox1 .lightbox{display:inline-block;
+	position:relative;
+	width:99%;
+	max-width:550px;
+	margin:3% 0;
+	background:#fff;
+	color:#333;
+	text-align:left;
+	overflow:hidden;
+	vertical-align:middle;
+	box-shadow:0 0 10px 0 rgba(0, 0, 0, .5);
+}
+.tour3lightbox1 .h1group{background:#323040;}
+.tour3lightbox1 .h1{display:block;margin:0;padding:.833em;color:#fff;font-weight:500;font-size:20px;}
+.tour3lightbox1 .b1.close{float:left;
+	position:absolute;right:10px;top:9px;
+	width:40px;height:40px;
+}
+.tour3lightbox1 .b1.close>.ic1{float:left;position:absolute;left:50%;top:50%;width:100%;height:100%;margin:-50%;
+	background:url(../../img/lib1tour3/ic80s4close1.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.tour3lightbox1 .deco1{}
+.tour3lightbox1 .cont{
+	padding:20px 6.364%; /* =35/550 */
+}
+.tour3lightbox1 .h2group{border-bottom:2px solid #333;}
+.tour3lightbox1 .h2{display:block;margin:0;padding:.333em 0;color:#000;font-weight:600;font-size:24px;letter-spacing:-2px;}
+.tour3lightbox1 .g1{display:inline-block;padding:.416em .666em;background:#00a49a;color:#fff;font-size:11px;line-height:1;text-align:center;}
+/* 정의목록. 스케줄 설정, 스템프 요청 */
+.tour3lightbox1 .dl1{display:block;margin:0;
+	padding:15px 4.167%; /* =(20/480) */
+	background:#f7f7f7;
+	border:1px solid #e7e7e7;
+	overflow:hidden;
+}
+.tour3lightbox1 .dl1 .di{display:block;margin:0 0 2px;padding:0;}
+.tour3lightbox1 .dl1 .dt{float:left;width:55px;padding:0 0 0 11px;
+	background:url(../../img/lib1tour3/bu2.png) no-repeat 0 50%;
+	font-weight:600;
+}
+.tour3lightbox1 .dl1 .dd{display:table-cell;width:9999px;}
+/* [IE8]fix */
+.tour3lightbox1 .b1.close>.ic1 img{display:block;position:static !important;margin:0 auto;}
+
+
+/* 인물.상세뷰(그림1.정의.버튼1) 20161206 */
+.view1f1dl1{position:relative;margin:0 0 1.5em 0;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.view1f1dl1>.wrap1.hybrid1box1{padding:0;}
+.view1f1dl1 .figs.column1{
+	width:auto;
+	padding:0 4.396% 0 0; /* =40/910 */
+}
+.view1f1dl1 .texts.column2{}
+/* 내용 */
+.view1f1dl1 .f1{display:block;position:relative;
+	width:280px; /* ☆ */
+	margin:0 auto 1em;
+}
+.view1f1dl1 .dl1{display:block;list-style:none;margin:0;padding:0;}
+.view1f1dl1 .dl1 .di{margin:-1px 0 0;padding:1em 0;border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;overflow:hidden;}
+.view1f1dl1 .dl1 .dt{float:left;width:160px;}
+.view1f1dl1 .dl1 .dd{display:table-cell;}
+.view1f1dl1 .ic1{display:inline-block;
+	width:46px;height:46px;
+	margin-right:.333em;
+	background:url() no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.view1f1dl1 .ic1.masterpiece1{background-image:url(../../img/lib1tour3/ic92s1paper1.png);}
+.view1f1dl1 .ic1.awards1{background-image:url(../../img/lib1tour3/ic92s1trophy1.png);}
+.view1f1dl1 .t1{color:#333;font-weight:600;font-size:1.286em;vertical-align:middle;}
+.view1f1dl1 ul.bu{margin:.666em 0;}
+
+
+/* 작품.상세뷰(그림1.정의.버튼1) 20170110 */
+.view1f1info1{position:relative;
+	width:560px;
+	margin:0 auto 1.5em;overflow:hidden;
+	background:#3a4252;
+}
+/* .hybrid1box1 재정의 */
+.view1f1info1 .wrap1.hybrid1box1{padding:0;}
+.view1f1info1 .wrap1.hybrid1box1>.column1{width:auto;margin:0;padding:0;}
+.view1f1info1 .wrap1.hybrid1box1>.column2{max-width:560px; /* ☆ */
+	height:auto;margin:0 auto;color:#fff;
+}
+/* 내용 */
+.view1f1info1 .f1{display:block;position:relative;
+	width:100%;
+	max-width:560px; /* ☆ */
+	margin:0 auto;
+}
+.view1f1info1 .f1t1{position:absolute;left:0;right:0;bottom:0;
+	padding:.5em .666em;
+	background:url(../../img/lib1tour3/b.000000.opacity.60.png);
+	color:#fff;
+	font-size:13px;
+}
+.view1f1info1 .f2{float:left;width:90px;height:90px;margin:30px 15px 30px 20px;
+	border-radius:9999px;
+	overflow:hidden;
+}
+.view1f1info1 .t1{display:block;padding:30px 20px;}
+.view1f1info1 .t1t1{display:block;font-size:20px;}
+.view1f1info1 .t1t2{display:block;}
+.view1f1info1 .f3{display:block;clear:both;/* margin:0 20px; */border-top:1px dotted #666d79;}
+.view1f1info1 .f3p1{display:block;/* margin:0 -20px; */}
+
+
+/* 작품.상세뷰.정의목록. 20170110 */
+.view1dl1 .dl1 {display:block;list-style:none;margin:0;padding:0;overflow:hidden;}
+.view1dl1 .dl1 .di{margin:-1px 0 0;padding:1em 0;border-top:1px dotted #ccc;overflow:hidden;}
+.view1dl1 .dl1 .dt{display:block;float:left;width:200px;margin:0 0 .666em;}
+.view1dl1 .dl1 .dd{display:table-cell;}
+.view1dl1 .ic1{display:inline-block;
+	width:46px;height:46px;
+	margin-right:.333em;
+	background:url() no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.view1dl1 .ic1.masterpiece1{background-image:url(../../img/lib1tour3/ic92s1paper1.png);}
+.view1dl1 .ic1.awards1{background-image:url(../../img/lib1tour3/ic92s1trophy1.png);}
+.view1dl1 .t1{color:#333;font-weight:600;font-size:1.5em;vertical-align:middle;}
+
+
+/* 목록(그림1글3정의목록1) 복합 .hybrid1box1, .tour3info1 : 행사/축제 목록.. 20161214 */
+.list2f1t3dl1{margin:0 0 1.5em 0;overflow:hidden;}
+.list2f1t3dl1 a{color:#333;}
+.list2f1t3dl1 a.f1[href]:focus{outline:1px dotted #000;}
+.list2f1t3dl1 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #ddd;}
+.list2f1t3dl1 .li1{border-top:1px solid #eee;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.list2f1t3dl1 .li1>.wrap1.hybrid1box1{
+	padding:30px 0 10px; /* ☆ */
+}
+.list2f1t3dl1 .li1 .column1{
+	width:280px;
+	margin:0 auto 20px; /* ☆ */
+}
+.list2f1t3dl1 .li1 .column2{
+	height:auto; /* = .column1 자식 높이 */
+}
+/* 내용 */
+.list2f1t3dl1 .li1 .figs{display:block;}
+.list2f1t3dl1 .li1 .texts{display:block;
+	margin:0 auto; /* ☆ */
+}
+.list2f1t3dl1 .li1 .f1{display:block;position:relative;
+	width:71.435%; /* >=(200/280) */
+	margin:0 auto;
+	padding:0 0 103.58075%; /* =(290/200)*(.71435) */
+	background:#eee;
+	overflow:hidden;
+}
+.list2f1t3dl1 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.list2f1t3dl1 .li1 .f1 img{display:block;position:relative;
+	width:auto;height:100%;min-width:34%;max-width:100%;
+	margin:0 auto;
+}
+.list2f1t3dl1 .li1 .texts>.t1{display:inline-block;
+	width:60px;height:60px;
+	border-radius:9999px;
+	background:#00a49a;
+	color:#fff;font-weight:600;font-size:15px;
+	line-height:60px;
+	text-align:center;
+}
+.list2f1t3dl1 .li1 .texts>.t2{display:block;margin:.5em 0;color:#333;font-size:1.714em;letter-spacing:-2px;overflow:hidden;}
+.list2f1t3dl1 .li1 .texts>.t3{display:block;position:relative;max-height:3.332em;margin:0 0 1.333em;
+	color:#666;line-height:1.666;
+	text-align:left; /* 모든폭 좌정렬 */
+	overflow:hidden;
+}
+.list2f1t3dl1 .li1 .texts>.t3:after{content:'…';display:block;
+	position:absolute;right:0;bottom:0;width:3em;height:1.666em;overflow:hidden;text-indent:-9999px;
+	background:linear-gradient(to right, rgba(255,255,255, 0) 0, #fff 100%);
+}
+/* .tour3info1 재정의 */
+.list2f1t3dl1 .li1 .tour3info1{padding:.666em 0;border-bottom:0;
+	text-align:left; /* 모든폭 좌정렬 */
+}
+.list2f1t3dl1 .li1 .tour3info1 .dl1 .di{margin:.666em 0;}
+
+
+/* 목록(그림1글2.글2버튼2) 복합 .hybrid1box1 : 여행스케줄 목록.. 20161207 */
+.list2f1t2t2b2{margin:0 0 1.5em 0;overflow:hidden;}
+.list2f1t2t2b2 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #ddd;}
+.list2f1t2t2b2 .li1{border-top:1px solid #ddd;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.list2f1t2t2b2 .li1>.wrap1.hybrid1box1{
+	padding:30px 0 10px; /* ☆ */
+}
+.list2f1t2t2b2 .li1 .column1{
+	width:190px;
+	margin:0 auto 20px; /* ☆ */
+}
+.list2f1t2t2b2 .li1 .column2{
+	height:120px; /* = .column1 자식 높이 */
+}
+/* 내용 */
+.list2f1t2t2b2 .li1 .figs{display:block;}
+.list2f1t2t2b2 .li1 .texts{display:block;
+	margin:0 auto 20px; /* ☆ */
+}
+.list2f1t2t2b2 .li1 .f1{display:table;position:relative;
+	width:120px;
+	height:120px;
+	margin:0 auto;
+	border-radius:50%;
+	border:2px dashed #d6d6d9;
+	background:#fff;
+	overflow:hidden;
+}
+.list2f1t2t2b2 .li1 .f1t1{display:table-cell;
+	font-weight:600;
+	line-height:1.333;
+	text-align:center;vertical-align:middle;
+}
+.list2f1t2t2b2 .li1 .f1t1t1{display:block;margin:0 0 .166em;color:#fb6400;font-size:14px;}
+.list2f1t2t2b2 .li1 .f1t1t2{display:block;color:#fb6400;font-size:18px;}
+.list2f1t2t2b2 .li1 .texts>.t1{display:block;color:#333;font-weight:600;font-size:1.429em;}
+.list2f1t2t2b2 .li1 .texts>.t2{display:block;margin:1em 0;}
+.list2f1t2t2b2 .li1 .btns{display:block;margin:0 0 -.333em;}
+
+
+/* 목록(그림1글2장식1.글2버튼2) 복합 .hybrid1box1 : 코스여행 목록.. 20161208. 20170117 */
+.list2f1t2i1t2b2{position:relative;margin:0 0 1.5em 0;line-height:1.333;overflow:hidden;}
+.list2f1t2i1t2b2 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #ddd;}
+.list2f1t2i1t2b2 .li1{border-top:1px solid #ddd;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.list2f1t2i1t2b2 .li1>.wrap1.hybrid1box1{
+	padding:30px 0; /* ☆ */
+}
+.list2f1t2i1t2b2 .li1 .column1{
+	width:270px;
+	margin:0 auto 10px; /* ☆ */
+}
+.list2f1t2i1t2b2 .li1 .column2{
+	height:210px; /* = .column1 자식 높이 */
+	vertical-align:top; /* ☆ */
+}
+/* 내용 */
+.list2f1t2i1t2b2 .li1 .figs{display:block;position:relative;width:210px;height:210px;margin:0 auto;}
+.list2f1t2i1t2b2 .li1 .texts{display:block;
+	margin:0 auto 0px; /* ☆ */
+}
+.list2f1t2i1t2b2 .li1 .f1{display:block;position:relative;width:100%;height:100%;border-radius:50%;background:#eee;overflow:hidden;}
+.list2f1t2i1t2b2 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.list2f1t2i1t2b2 .li1 .f1 img{display:block;position:relative;width:auto;height:100%;min-width:34%;max-width:100%;margin:0 auto;}
+.list2f1t2i1t2b2 .li1 .t1s{display:table;table-layout:fixed;position:absolute;left:0;right:0;top:0;bottom:0;border-radius:50%;
+	background:url(../../img/lib1tour3/b.000000.opacity.40.png);
+	overflow:hidden;
+}
+.list2f1t2i1t2b2 .li1 .t1c{display:table-cell;
+	width:210px;height:170px;
+	padding:20px;
+	text-align:center;
+	vertical-align:middle;
+}
+.list2f1t2i1t2b2 .li1 .t1t1{display:block;margin:0 0 .333em;color:#fff;font-size:14px;}
+.list2f1t2i1t2b2 .li1 .t1t2{display:block;color:#fff;font-size:20px;}
+.list2f1t2i1t2b2 .li1 .deco1{float:left;z-index:10;position:absolute;right:15px;bottom:5px;
+	width:45px;height:45px;
+	border-radius:50%;
+	background:#f65d00;
+	overflow:hidden;
+}
+.list2f1t2i1t2b2 .li1 .deco1 .ic1{float:left;position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;
+	background:url(../../img/lib1tour3/ic40s4c2search1.png) no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.list2f1t2i1t2b2 .li1 .texts>.t1{display:block;margin:.333em 0;color:#000;font-weight:500;font-size:1.714em;letter-spacing:-2px;}
+.list2f1t2i1t2b2 .li1 .texts>.t2{display:block;margin:1em 0;color:#555;line-height:1.5;}
+.list2f1t2i1t2b2 .li1 .btns{display:block;margin:0 0 .333em;}
+.list2f1t2i1t2b2 .li1 .button{display:inline-block;padding:.548em .786em;border:1px solid #999;font-weight:500;}
+/* a */
+.list2f1t2i1t2b2 .li1 a{text-decoration:none;}
+
+
+/* 여행코스(그림1장식1버튼1.글2.글2버튼2) : 여행스케줄 상세, 코스여행 상세. 20161209 */
+.tour3course1{position:relative;margin:0 0 1.5em 0;line-height:1.333;}
+.tour3course1:before,
+.tour3course1:after{content:'';display:block;position:relative;height:5px;background:url(../../img/lib1tour3/b.000000.pattern1.png);overflow:hidden;opacity:.2;}
+.tour3course1>.deco1{display:block;
+	position:relative;
+	width:120px;height:120px;
+	margin:-60px auto -40px;
+	background:#fff url(../../img/lib1tour3/ic240s1course1.png) no-repeat top center;
+	background-size:contain;
+}
+.tour3course1>.wrap1{margin:0;padding:20px 0 20px 15px;overflow:hidden;}
+.tour3course1 .lst1{list-style:none;margin:0;padding:0;}
+.tour3course1 .li1{display:inline-block;position:relative;
+	width:220px; /* <=910/4-4 */
+	margin:0 0 10px;
+	vertical-align:top;
+}
+.tour3course1 .li1>.wrap1{}
+.tour3course1 .li1 .wrap1g1{display:block;position:relative;width:160px;margin:0 auto;padding:20px 30px;}
+.tour3course1 .li1 .wrap1g2{display:block;position:relative;width:160px;margin:0 auto;border:1px solid #d7d7d7;}
+.tour3course1 .li1 .a1{float:left;
+	z-index:10;
+	position:absolute;left:0;top:100px;width:50px;height:24px;margin:-12px -25px;
+	background:url(../../img/lib1tour3/course1a2ic1@2x.png) no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.tour3course1 .li1 .figs{display:block;position:relative;width:160px;height:160px;}
+.tour3course1 .li1 .figs .ic1{float:left;z-index:10;position:absolute;right:0;bottom:-7px;
+	width:50px;height:32px;
+	padding:8px 0 0;
+	background:url(../../img/lib1tour3/ic100mapmarker1bg.png) no-repeat center center;background-size:contain;
+	color:#fff;font:bold 16px helvatica,arial,sans-serif;text-align:center;
+	letter-spacing:0;
+	overflow:hidden;
+}
+.tour3course1 .li1 .f1{display:block;position:relative;width:100%;height:100%;border-radius:50%;background:#eee;overflow:hidden;}
+.tour3course1 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.tour3course1 .li1 .f1 img{display:block;position:relative;width:auto;height:100%;min-width:34%;max-width:100%;margin:0 auto;}
+.tour3course1 .li1 .t1s{display:block;margin:1em 0 0;text-align:center;}
+.tour3course1 .li1 .t1t1{display:block;color:#555;font-size:14px;}
+.tour3course1 .li1 .t1t2{display:block;color:#333;font-size:16px;}
+
+.tour3course1 .dl1{list-style:none;display:block;position:relative;margin:.666em;line-height:1.333;text-align:left;}
+.tour3course1 .dl1 .di{display:block;margin:.333em 0;overflow:hidden;}
+.tour3course1 .dl1 .dt{float:left;width:25px;}
+.tour3course1 .dl1 .dd{display:table-cell;width:9999px;
+	height:20px; /* 아이콘 높이 */
+	color:#666;font-size:13px;vertical-align:middle;
+}
+.tour3course1 .dl1 .dt .t1{position:absolute;left:-9999px;}
+.tour3course1 .dl1 .dt .ic1{display:inline-block;
+	width:20px;height:20px;
+	margin:0 .333em 0 0;
+	border-radius:50%;
+	background:#eee url() no-repeat center center;background-size:contain;
+	vertical-align:middle;
+}
+.tour3course1 .dl1 .date .ic1{background-image:url(../../img/lib1tour3/ic40s1calendar1.png);}
+.tour3course1 .dl1 .time .ic1{background-image:url(../../img/lib1tour3/ic40s1clock1.png);}
+.tour3course1 .li1 .btns{display:block;margin:0;padding:.166em 0;border-top:1px dotted #d7d7d7;text-align:center;}
+.tour3course1 .li1 .btns .button{padding-left:1em;padding-right:1em;}
+.tour3course1 .li1 .deco1{display:none;position:absolute;left:50%;top:20px;width:160px;height:160px;margin:0 -80px;
+	border-radius:50%;background:#000;background:rgba(0,0,0, .5);
+}
+.tour3course1 .li1 .deco1 .ic1{display:inline-block;position:absolute;left:50%;bottom:50%;width:40px;height:40px;margin:-14px -20px;
+	background:url(../../img/lib1tour3/ic80s3mouse1.png) no-repeat center center;background-size:contain;
+}
+.tour3course1 .li1 .deco1 .t1{display:inline-block;position:absolute;left:0;right:0;top:50%;
+	margin:17px;
+	color:#fff;font-size:12px;text-align:center;
+}
+/* 효과 */
+.tour3course1 .li1 .wrap1g1:hover,
+.tour3course1 .li1 .wrap1g1:focus{background:#f0f1f2;text-decoration:none;transition:.2s;}
+.tour3course1 .li1 .wrap1g1:hover .t1t2,
+.tour3course1 .li1 .wrap1g1:focus .t1t2{text-decoration:underline;}
+.tour3course1 .li1 .wrap1g1:hover .figs .ic1,
+.tour3course1 .li1 .wrap1g1:focus .figs .ic1{display:none;}
+.tour3course1 .li1 .wrap1g1:hover .deco1,
+.tour3course1 .li1 .wrap1g1:focus .deco1{display:block;}
+
+
+/* 접어지는박스 : 코스소개. 20161212 */
+.box1collapse1{display:block !important; /* 토글대상이어도 항상 보인다. */
+	position:relative;
+	height:220px;
+	background:#fff;
+	overflow:hidden;
+	transition:.2s;
+}
+.box1collapse1:after{content:'…';display:block;
+	position:absolute;left:0;right:0;bottom:0;width:100%;height:3em;overflow:hidden;text-indent:-9999px;
+	background:linear-gradient(to bottom, rgba(255,255,255, 0) 0, #fff 100%);
+}
+.box1collapse1.on{height:auto;}
+.box1collapse1.on:after{display:none;}
+/* 토글버튼 */
+.box1collapse1+.button.tour3more.toggle .t2{position:absolute;left:-9999px;}
+.box1collapse1.on+.button.tour3more.toggle:after{content:'';display:inline-block;
+	width:0;height:0;margin:2px .25em;border:4px solid transparent;border-bottom-color:#000;overflow:hidden;text-indent:100%;
+}
+
+
+/* 달력(표셀목록) : 물때정보.. 20161214 */
+.timetable3{margin:1em auto 1.666em;}
+.timetable3 table{table-layout:fixed;width:100%;margin:0;border:0;border-collapse:collapse;border-left:1px solid #e3e6e9;line-height:1.333;}
+.timetable3 table th,
+.timetable3 table td{width:14.285%;height:14.285%;padding:0;border:1px solid #e3e6e9;text-align:center;vertical-align:top;}
+.timetable3 table tr.day th{padding:.666em .333em;border-width:0 1px 1px 0;background:#5a606c;color:#ddd;font-weight:500;font-size:1.071em;}
+.timetable3 table tr.day th:first-child{border-width:0 1px 1px 1px;}
+.timetable3 table td .cell{display:table;table-layout:fixed;position:relative;margin:-1px;}
+.timetable3 table td .date{z-index:10;display:block;position:absolute;left:0;top:0;margin:0;padding:.666em;color:#333;font-weight:bold;font-size:1em;}
+.timetable3 table td .a1{display:table-cell;
+	width:100%;
+	height:56px;
+	padding:20px 2px 20px 2px;
+	border:2px solid transparent;
+	background:transparent;
+	vertical-align:middle;
+}
+.timetable3 table td .a1t1{display:block;margin:.666em 0;color:#666;font-size:1em;line-height:1;}
+.timetable3 table .sun .date{color:#da3b3b;}
+.timetable3 table .sat .date{color:#006bd8;}
+.timetable3 table .today .cell{z-index:10;}
+.timetable3 table .today .a1{border-color:#1598dc;}
+
+
+/* 목록(그림1글1장식1.글2) 복합 .hybrid1box1 : 코스여행 목록.. 20170316 */
+.list2f1t1i1t2{position:relative;margin:0 0 1.5em 0;line-height:1.333;overflow:hidden;}
+.list2f1t1i1t2 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #ddd;}
+.list2f1t1i1t2 .li1{border-top:1px solid #ddd;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.list2f1t1i1t2 .li1>.wrap1.hybrid1box1{
+	padding:30px 0; /* ☆ */
+}
+.list2f1t1i1t2 .li1 .column1{
+	width:310px;
+	margin:0 auto 10px; /* ☆ */
+}
+/* .list2f1t1i1t2 .li1 .column2{
+	height:210px; = .column1 자식 높이
+	vertical-align:top; ☆
+} */
+/* 내용 */
+.list2f1t1i1t2 .li1 .figs{display:inline-block;position:relative;width:280px;height:200px;}
+.list2f1t1i1t2 .li1 .texts{display:block;
+	margin:0 auto; /* ☆ */
+}
+.list2f1t1i1t2 .li1 .f1{display:block;position:relative;width:100%;height:100%;background:#eee;overflow:hidden;}
+.list2f1t1i1t2 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.list2f1t1i1t2 .li1 .f1 img{display:block;position:relative;width:auto;height:100%;min-width:34%;max-width:100%;margin:0 auto;}
+.list2f1t1i1t2 .li1 .t1s{display:none;table-layout:fixed;position:absolute;left:0;right:0;top:0;bottom:0;
+	background:url(../../img/lib1tour3/b.000000.opacity.40.png);
+	overflow:hidden;
+}
+.list2f1t1i1t2 .li1 a:hover .t1s,
+.list2f1t1i1t2 .li1 a:focus .t1s{display:table;}
+.list2f1t1i1t2 .li1 .t1c{display:table-cell;
+	width:240px;height:160px;
+	padding:20px;
+	text-align:center;
+	vertical-align:middle;
+}
+.list2f1t1i1t2 .li1 .t1t1{display:block;margin:0 0 .333em;color:#fff;font-size:13px;}
+.list2f1t1i1t2 .li1 .deco1{display:block;position:relative;
+	width:45px;height:45px;
+	margin:0 auto 5px;
+	border-radius:50%;
+	background:#067AE1;
+	overflow:hidden;
+}
+.list2f1t1i1t2 .li1 .deco1 .ic1{float:left;position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;
+	background:url(../../img/lib1tour3/ic40s4c2search1.png) no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.list2f1t1i1t2 .li1 .texts{display:block;}
+.list2f1t1i1t2 .li1 .texts .t1{display:block;
+	padding:.333em 0 .5em;
+	border-bottom:1px dotted #ccc;
+	color:#333;
+	font-weight:500;font-size:1.714em;	letter-spacing:-2px;
+}
+.list2f1t1i1t2 .li1 .texts .t2{display:block;position:relative;
+	margin:1em 0 0;
+	color:#555;line-height:1.857;
+}
+.list2f1t1i1t2 .li1 .texts .deco2{float:left;
+	width:56px;height:56px;
+	margin:0 1em 0 0;
+	background:url(../../img/lib1tour3/course2deco2.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+.list2f1t1i1t2 .li1 .texts .t2t1{display:block;overflow:hidden;}
+.list2f1t1i1t2 .li1 .texts .t2t1t1{display:inline-block;vertical-align:middle;}
+.list2f1t1i1t2 .li1 .texts .arrow{display:inline-block;
+	width:14px;height:14px;
+	margin:0 .166em;
+	background:url(../../img/lib1tour3/course2a3ic1.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+/* a */
+.list2f1t1i1t2 .li1 a{text-decoration:none;}
+
+
+/* 여행코스(그림1장식1버튼1.글2.글2버튼2) : 코스여행 상세. 20170320 */
+.tour3course2{position:relative;margin:0 0 1.5em 0;line-height:1.333;}
+/* .tour3course2:before, */
+.tour3course2:after{content:'';display:block;position:relative;height:5px;background:url(../../img/lib1tour3/b.000000.pattern1.png);overflow:hidden;opacity:.2;}
+.tour3course2>.wrap1{padding:20px 0;}
+.tour3course2 .lst1{display:block;list-style:none;
+	width:300px; /* ☆ */
+	margin:0 auto;
+	padding:0;
+}
+.tour3course2 .li1{display:inline-block;position:relative;
+	box-sizing:border-box;
+	width:300px; /* <=910/3-3 */
+	padding:0 60px 0 0;
+	margin:0 -.25em 20px 0;
+	text-align:left; /* ☆ */
+	vertical-align:top;
+}
+.tour3course2 .li1>.wrap1{}
+.tour3course2 .li1 .wrap1g1{display:block;position:relative;
+	border:1px solid #d7d7d7;
+	border-radius:5px;
+	overflow:hidden;
+}
+.tour3course2 .li1 .wrap1g2{display:block;position:relative;;margin:0 auto;
+	padding:6px 0;
+	overflow:hidden;
+}
+.tour3course2 .li1 .t1s{display:block;margin:6px 0;
+	overflow:hidden;
+}
+.tour3course2 .li1 .t1s .ic1{float:left;
+	width:50px;height:32px;
+	margin:0 -4px 0 0;
+	padding:8px 0 0;
+	background:url(../../img/lib1tour3/ic100mapmarker1bg.png) no-repeat center center;background-size:contain;
+	color:#fff;font:bold 16px helvatica,arial,sans-serif;text-align:center;
+	letter-spacing:0;
+	overflow:hidden;
+}
+.tour3course2 .li1 .t1t1{display:block;
+	padding:.666em .666em 0 0;
+	color:#333;font-size:16px;
+	overflow:hidden;
+}
+.tour3course2 .li1 .figs{display:block;position:relative;height:157px;}
+.tour3course2 .li1 .f1{display:block;position:relative;width:100%;height:100%;background:#eee;overflow:hidden;}
+.tour3course2 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.tour3course2 .li1 .f1 img{display:block;position:relative;width:auto;height:100%;min-width:34%;max-width:100%;margin:0 auto;}
+.tour3course2 .li1 .a1{float:left;
+	z-index:10;position:absolute;right:0;top:105px;width:50px;height:30px;margin:-15px 5px;
+	background:url(../../img/lib1tour3/course2a2ic1.png) no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;
+}
+/* .tour3course2 .li1 .wrap1g2 > */
+.tour3course2 .dl1{list-style:none;display:block;
+	float:left;
+	width:180px;
+	position:relative;
+	margin:0;padding:0;
+	line-height:1.333;text-align:left;
+}
+.tour3course2 .dl1 .di{display:block;margin:.416em 0;overflow:hidden;}
+.tour3course2 .dl1 .dt{float:left;width:25px;}
+.tour3course2 .dl1 .dd{display:table-cell;width:9999px;
+	height:20px; /* 아이콘 높이 */
+	color:#666;font-size:13px;vertical-align:middle;
+}
+.tour3course2 .dl1 .dt .t1{position:absolute;left:-9999px;}
+.tour3course2 .dl1 .dt .ic1{display:inline-block;
+	width:20px;height:20px;
+	margin:0 .333em 0 0;
+	border-radius:50%;
+	background:#eee url() no-repeat center center;background-size:contain;
+	vertical-align:middle;
+}
+.tour3course2 .dl1 .date .ic1{background-image:url(../../img/lib1tour3/ic40s1calendar1.png);}
+.tour3course2 .dl1 .time .ic1{background-image:url(../../img/lib1tour3/ic40s1clock1.png);}
+.tour3course2 .li1 .btns{display:block;
+	float:right;
+	width:60px;
+	margin:0;padding:0;
+	text-align:center;
+}
+.tour3course2 .li1 .btns .button{height:25px;margin:4px 0 0;
+	padding:5px 1em;
+	line-height:1;
+}
+/* 효과 */
+.tour3course2 .li1 .wrap1g1:hover,
+.tour3course2 .li1 .wrap1g1:focus{
+	border-color:#000;
+	text-decoration:none;
+	box-shadow:0 -1px 5px 0 rgba(0, 0, 0, .2);
+	transition:.2s;
+}
+.tour3course2 .li1 .a1:hover,
+.tour3course2 .li1 .a1:focus{
+	animation:kf-rock1hor1px .5s infinite;
+}
+@keyframes kf-rock1hor1px {
+	0%{transform:translateX(-1px);}
+	100%{transform:translateX(1px);}
+}
+/* @media */
+@media all and (min-width:640px){
+	.tour3course2 .lst1{width:600px;}
+}
+@media all and (min-width:960px){
+	.tour3course2 .lst1{width:900px;}
+}
+
+/* 별점(단일크기이미지로 다중크기표현) 20160616 */
+.rating1star5{display:inline-block;width:120px;height:20px;
+	background:url(../../img/lib1tour3/rating1star5off.png) no-repeat;
+	background-size:cover;
+	overflow:hidden;
+}
+*+html .rating1star5{display:inline;}
+.rating1star5>.ic1{float:left;width:100%;height:100%;
+	background:url(../../img/lib1tour3/rating1star5on.png) no-repeat left bottom;
+	background-size:cover;
+	overflow:hidden;
+}
+
+/* YYYYMMDD.Writer. ◇◆ */
+
+
+/* RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */
+/* small~xlarge */
+@media all and (min-width:768px){/* medium ◇◆◇◆◇◆◇◆◇◆ */
+
+
+.tour3map1{height:510px;}
+
+.tour3btns1{margin-top:-70px;}
+
+.pic1gallery3 .column{float:left;
+	width:61.538%; /* =560/910 */
+}
+.pic1gallery3 .column+.column{float:right;
+	width:35.165%; /* =320/910 */
+}
+.pic1gallery3 .mNum{
+	padding:0 0 113.182%; /* =:=((124/164)/2)*3-(1/430) */
+}
+.pic1gallery3 .mNum li{
+	width:50%; /* =1/2 */
+	padding:0 0 37.805%; /* =:=(124/164)/2 */
+}
+
+.tour3card2 .li1 .wrap1{padding-right:60px;}
+.tour3card2 .li1 .b1.detail{display:block;}
+
+.list2f1t1i1t2 .li1 .column2{
+	height:210px; /* = .column1 자식 높이 */
+	vertical-align:top; /* ☆ */
+}
+
+} /* /(min-width:768px) */
+@media all and (min-width:1000px){/* large ◇◆◇◆◇◆◇◆◇◆ */
+} /* /(min-width:1000px) */
+@media all and (min-width:1200px){/* xlarge ◇◆◇◆◇◆◇◆◇◆ */
+
+
+
+
+
+} /* /(min-width:1200px) */
+/* /RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */

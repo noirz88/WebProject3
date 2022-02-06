@@ -1,0 +1,200 @@
+@charset "utf-8";
+/**
+ * @File Name : lib1cp4.css
+ * @Description : Components Library : 신규 콘텐츠
+ * @Modification Information
+ * <pre>
+ * 수정일 | 수정자 | 수정내용
+ * 2016.11.18 | 문영신 | 최초 등록
+ * 2016.11.22 | 문영신 | 요구반영. 결함개선. 고도화.
+ * 2016.12.12 | 문영신 | 요구반영. 결함개선. 고도화.
+ * 2017.02.23 | 문영신 | 반응형 이미지 가로 1px 오차 결함 해결.
+ * </pre>
+ * @author 웹표준화실 문영신
+ * @since 2016.11.18
+ *
+ * @Copyright (C) IACTS.CO.KR All rights reserved.
+ */
+
+/*! Components Library v.20161122 r.20161122 | by MoonYoungshin[myshin@naver.com] | MIT License */
+
+/* [IE8+]compatible! */
+
+/* Table of contents ))
+ | @import
+ | Overwrite
+ | Contents Share
+ | .콘텐츠래퍼클래스명1
+ | .dl2table1
+ | .as1radio1
+ | .form1agree1
+ | .list2f1t3
+ | …
+ | RWD
+ */
+
+
+/* All Device ◆◆◆◆◆◆◆◆◆◆ */
+
+
+/* … lib.css, lib1cp1.css )) Overwrite YYYYMMDD ◆◆◆ */
+
+
+/* ◇◆ Components Library ◇◆◇◆◇◆◇◆◇◆ */
+
+/* ◇◆ Contents Share ◇◆ */
+
+
+/* 정의목록to표. 20161121 */
+.dl2table1{display:block;position:relative;border:1px solid #dadde0;background:#fff;overflow:hidden;}
+.dl2table1 *{list-style:none;margin:0;padding:0;}
+.dl2table1 .h1{display:block;padding:.666em;background:#f7f8f9;font-size:1.143em;text-align:center;}
+.dl2table1 dl{display:block;position:relative;
+	z-index:0; /* ☆ */
+	overflow:hidden;
+}
+.dl2table1 dt,
+.dl2table1 dd{display:block;float:left;position:relative;
+	box-sizing:border-box; /* ☆ */
+	padding:.666em 1.5%;
+	border-top:1px solid #e6e6e6;
+}
+.dl2table1 dt{clear:both;}
+.dl2table1 dt:before{content:'';display:block;
+	z-index:-1; /* ☆ */
+	position:absolute;left:0;right:0;top:0;bottom:-1000px;
+	background:#f7f8f9;
+}
+.dl2table1 .dt1,
+.dl2table1 .dt2{width:25%;}
+.dl2table1 .dd1,
+.dl2table1 .dd2{width:75%;}
+
+
+/* 폼radio처럼. 20161122 */
+.as1radio1{display:block;position:relative;}
+.as1radio1 *{list-style:none;margin:0;padding:0;}
+.as1radio1 ul{margin:0 0 0 1em;overflow:hidden;}
+.as1radio1 li{float:left;width:6em;}
+.as1radio1 a{float:left;position:relative;padding:.333em;color:#333;text-decoration:none !important;}
+.as1radio1 a .t1{display:inline-block;vertical-align:middle;}
+.as1radio1 a .ic1{display:inline-block;
+	width:20px;height:20px;
+	margin-left:-.333em;
+	background:url(../../img/lib/ic40form1radio1off.png) no-repeat center center;
+	background-size:contain;text-indent:-9999px;overflow:hidden;
+	vertical-align:middle;
+}
+.as1radio1 li.on a .ic1{background-image:url(../../img/lib/ic40form1radio1on.png);}
+/* [~IE8] */
+html.lteIE8 .as1radio1 a .ic1{background-image:url(../../img/lib/ic20form1radio1off.png);}
+html.lteIE8 .as1radio1 li.on a .ic1{background-image:url(../../img/lib/ic20form1radio1on.png);}
+
+
+/* 동의(폼checkbox). 20161212 */
+.form1agree1{display:block;position:relative;padding:0 0 0 34px;}
+.form1agree1 input[type='checkbox']{
+	position:absolute;left:0;top:0;
+	width:30px;height:30px;
+	margin:0;
+	border:0;
+}
+.form1agree1 input[type='checkbox']:focus{outline:1px dotted #000;}
+.form1agree1 input[type='checkbox']+label{display:inline-block;
+	z-index:10;position:relative;
+	padding:0; /* ☆ lib.css 에 정의된 패딩값 초기화 */
+}
+.form1agree1 input[type='checkbox']+label>.t1{display:block;padding:3px 0 0;font-weight:600;font-size:1.071em;vertical-align:middle;}
+.form1agree1 input[type='checkbox']+label>.ic1{float:left;width:30px;height:30px;margin:0 4px 0 -34px;
+	background:#fff url(../../img/lib/ic60form2check1off.png) no-repeat center center;background-size:contain;
+	vertical-align:middle;
+}
+.form1agree1 input[type='checkbox']:checked+label>.ic1{	background-image:url(../../img/lib/ic60form2check1on.png);}
+/* [~IE8] */
+html.lteIE8 .form1agree1 input[type='checkbox']+label>.ic1{background-image:url(../../img/lib/ic30form2check1off.png);}
+html.lteIE8 .form1agree1 input[type='checkbox']:checked+label>.ic1{background-image:url(../../img/lib/ic30form2check1on.png);}
+
+
+/* ◇◆ Contents Each ◇◆ */
+
+
+/* 목록(그림1글3) 복합 .hybrid1box1 : ○○소식지 목록.. 20161209 */
+.list2f1t3{margin:0 0 1.5em 0;overflow:hidden;}
+.list2f1t3 a{color:#333;}
+.list2f1t3 .lst1{list-style:none;margin:0;padding:0;border-bottom:1px solid #c8c8cc;}
+.list2f1t3 .li1{border-top:1px solid #c8c8cc;overflow:hidden;}
+/* .hybrid1box1 재정의 */
+.list2f1t3 .li1>.wrap1.hybrid1box1{
+	padding:20px 0 10px; /* ☆ */
+}
+.list2f1t3 .li1 .column1{
+	width:230px;
+	margin:10px 4.396% 20px 0; /* ☆ (40/910) */
+}
+.list2f1t3 .li1 .column2{
+	height:auto; /* = .column1 자식 높이 */
+}
+/* 내용 */
+.list2f1t3 .li1 .figs{display:block;}
+.list2f1t3 .li1 .texts{display:block;
+	margin:0 auto; /* ☆ */
+}
+.list2f1t3 .li1 .f1{display:block;position:relative;
+	width:100%; /* >=(230/230) */
+	margin:0 auto;
+	padding:0 0 71.739%; /* =(165/230)*(1) */
+	background:#eee;
+	overflow:hidden;
+}
+.list2f1t3 .li1 .f1 .f1p1{display:block;position:absolute;left:-100%;right:-100%;top:0;bottom:0;overflow:hidden;}
+.list2f1t3 .li1 .f1 img{display:block;position:relative;
+	width:auto;height:100%;min-width:34%;max-width:100%;
+	margin:0 auto;
+}
+.list2f1t3 .li1 .texts>.t1{display:block;margin:.666em 0 1em;color:#333;font-weight:600;font-size:1.714em;line-height:1.333;letter-spacing:-2px;overflow:hidden;}
+.list2f1t3 .li1 .texts>.t2{display:block;margin:.833em 0;color:#000;font-size:1.143em;line-height:1.333;overflow:hidden;}
+.list2f1t3 .li1 .texts>.t3{display:block;position:relative;max-height:4.998em;margin:0 0 1.333em;
+	color:#666;line-height:1.666;
+	text-align:left; /* 모든폭 좌정렬 */
+	overflow:hidden;
+}
+.list2f1t3 .li1 .texts>.t3:after{content:'…';display:block;
+	position:absolute;right:0;bottom:0;width:3em;height:1.666em;overflow:hidden;text-indent:-9999px;
+	background:linear-gradient(to right, rgba(255,255,255, 0) 0, #fff 100%);
+}
+/* 효과 */
+.list2f1t3 .li1 a{text-decoration:none;}
+.list2f1t3 .li1 a:hover .texts>.t1,
+.list2f1t3 .li1 a:focus .texts>.t1{text-decoration:underline;}
+
+
+
+
+/* YYYYMMDD.Writer. ◇◆ */
+
+
+/* RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */
+/* small~xlarge */
+@media all and (min-width:768px){/* medium ◇◆◇◆◇◆◇◆◇◆ */
+
+
+.dl2table1 dt{clear:none;}
+.dl2table1 .dt1:nth-child(4n-3){clear:both;}
+.dl2table1 .dt1,
+.dl2table1 .dt2{width:20%;}
+.dl2table1 .dd1{width:30%;}
+.dl2table1 .dd2{width:80%;}
+
+
+
+} /* /(min-width:768px) */
+@media all and (min-width:1000px){/* large ◇◆◇◆◇◆◇◆◇◆ */
+} /* /(min-width:1000px) */
+@media all and (min-width:1200px){/* xlarge ◇◆◇◆◇◆◇◆◇◆ */
+
+
+
+
+
+} /* /(min-width:1200px) */
+/* /RWD ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆ */

@@ -1,0 +1,78 @@
+function copy_trackback() {
+	var trb = document.location.href;
+	var IE=(document.all)?true:false;
+	if (IE) {
+		if(confirm("이 글의 트랙백 주소를 클립보드에 복사하시겠습니까?"))
+			window.clipboardData.setData("Text", trb);
+	} else {
+		temp = prompt("이 글의 트랙백 주소입니다. Ctrl+C를 눌러 클립보드로 복사하세요", trb);
+	}
+}
+jQuery(function($){
+	var __snstitle = encodeURIComponent(document.title);
+	var __snsurl = encodeURIComponent(document.location.href );
+	//facebook
+	$("#bt1facebook").on("click", function(e){
+		e.preventDefault();
+		var __fbwin = window.open('http://www.facebook.com/share.php?u=' + __snsurl + '&title=' + __snstitle, '', 'width=400,height=300');
+		__fbwin.focus();
+	});
+	//twitter -- pagecd파싱해서 shutten url 구현필요합니다.
+	$("#bt1twitter").on("click", function(e){
+		e.preventDefault();
+		if ( $("#sns_bbs_title").length > 0 ) {
+			__snstitle = $("#sns_bbs_title").html();
+		}
+		var __twwin = window.open('https://twitter.com/intent/tweet?text=' + __snstitle + '&url='+ __snsurl, '', 'width=400,height=300');
+		__twwin.focus();
+	});
+	//google plus
+	$("#bt1google").on("click", function(e){
+		e.preventDefault();
+		var __gowin = window.open('https://plus.google.com/share?url=' + __snsurl , '', 'width=500,height=600');
+		__gowin.focus();
+	});
+	//trackback.
+	$("#bt1copy").on("click", function(e){
+		e.preventDefault();copy_trackback();
+	});
+	
+	//라인링크.
+	$(".line", "#bn1").on("click", function(e){
+		e.preventDefault();
+		var __linewin= window.open('http://line.me/R/msg/text/?' + __snstitle + ' ' + __snsurl, '', 'width=500,height=600');
+		__linewin.focus();
+	});
+	
+	
+	//네이버 BANK공유 
+	$("#bt1band").on("click", function(e){
+		e.preventDefault();
+		var __bawin = window.open('http://band.us/plugin/share?body=' + __snsurl + ' ' + __snstitle , '', 'width=500,height=600');
+		__bawin.focus();
+	});
+	
+	//카카오톡 연결이 안되는경우가 있습니다.
+	if ( typeof Kakao != 'undefined' ) {
+		// 하단은 카카오 스토리 관련 항목입니다.
+	    Kakao.init('29c8558725ae5cbcbe8cc0510789987b');
+	    $("#bt1kakao").click(function(){
+	    	Kakao.Story.share({
+	            url: document.location.href.replace(/#/g, ''),
+	            text: document.title
+	          });
+		});
+	    
+	    $("#bt1kakaolink").click(function(){
+	    	Kakao.Link.sendTalkLink({
+		          label: __snstitle + ' ' + __snsurl
+		        });
+		});
+	    
+	} else {
+		//불가능하면 나오지 않도록 처리.
+		$("#bt1kakao").parent().remove();
+	}
+    
+});
+
